@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="query"
+   SeparateXMLFiles="true"
+   PackageName="com.cylande.unitedretail.batch.business.query" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+   </DesignTime>
+   <Containee
+      Name="BatchErrorsView"
+      FullName="com.cylande.unitedretail.batch.business.query.BatchErrorsView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="BatchInProgressView"
+      FullName="com.cylande.unitedretail.batch.business.query.BatchInProgressView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="BatchRunInErrorView"
+      FullName="com.cylande.unitedretail.batch.business.query.BatchRunInErrorView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="BatchRunNameListView"
+      FullName="com.cylande.unitedretail.batch.business.query.BatchRunNameListView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="BatchRunView"
+      FullName="com.cylande.unitedretail.batch.business.query.BatchRunView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="FileProviderTraceView"
+      FullName="com.cylande.unitedretail.batch.business.query.FileProviderTraceView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="ProviderCrcView"
+      FullName="com.cylande.unitedretail.batch.business.query.ProviderCrcView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="TaskAuditView"
+      FullName="com.cylande.unitedretail.batch.business.query.TaskAuditView"
+      ObjectType="ViewObject" >
+   </Containee>
+   <Containee
+      Name="TaskRunView"
+      FullName="com.cylande.unitedretail.batch.business.query.TaskRunView"
+      ObjectType="ViewObject" >
+   </Containee>
+</JboPackage>

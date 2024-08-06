@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bouchons>
+  <bouchon>
+    <serviceName>com.cylande.unitedretail.network.service.common.SiteManagerService</serviceName>
+    <expectations>
+      <methodName>findSite</methodName>
+      <andReturn>
+<chaining>*</chaining>
+        <xmlValues><![CDATA[
+          
+            <siteListType>
+              <values>
+                <code>LOCAL</code>
+              </values>
+            </siteListType>
+          
+        ]]></xmlValues>
+      </andReturn>
+    </expectations>
+    <expectations>
+      <methodName>getSite</methodName>
+      <andReturn>
+<chaining>*</chaining>
+        <xmlValues><![CDATA[
+          
+            <siteType>
+              <code>LOCAL</code>
+            </siteType>
+          
+        ]]></xmlValues>
+      </andReturn>
+    </expectations>
+  </bouchon>
+  <bouchon>
+        <serviceName>com.cylande.unitedretail.sequence.service.common.SequenceEngineService</serviceName>
+        <expectations>
+            <methodName>nextValue</methodName>
+            <andReturn>
+<chaining>1</chaining>
+                <xmlValues><![CDATA[
+                  
+                    <sequenceResultType>
+                      <intValue>1</intValue>
+                    </sequenceResultType>
+                  
+                ]]></xmlValues>
+            </andReturn>
+            <andReturn>
+<chaining>1</chaining>
+                <xmlValues><![CDATA[
+                  
+                    <sequenceResultType>
+                      <intValue>2</intValue>
+                    </sequenceResultType>
+                  
+                ]]></xmlValues>
+            </andReturn>
+        </expectations>
+    </bouchon>
+</bouchons>

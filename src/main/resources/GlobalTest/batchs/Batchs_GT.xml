@@ -1,0 +1,6 @@
+<batch name="GTBatch">
+  <description>GlobalTest Batch</description>
+  <sequence>
+    <batch ref="GTQueryDBSelect"/>
+  </sequence>
+</batch>

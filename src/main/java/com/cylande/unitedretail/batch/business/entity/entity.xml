@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="entity"
+   SeparateXMLFiles="true"
+   PackageName="com.cylande.unitedretail.batch.business.entity" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+   </DesignTime>
+   <Containee
+      Name="BatchRun"
+      FullName="com.cylande.unitedretail.batch.business.entity.BatchRun"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="FileProviderTrace"
+      FullName="com.cylande.unitedretail.batch.business.entity.FileProviderTrace"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="ProviderCrc"
+      FullName="com.cylande.unitedretail.batch.business.entity.ProviderCrc"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="TaskAudit"
+      FullName="com.cylande.unitedretail.batch.business.entity.TaskAudit"
+      ObjectType="Entity" >
+   </Containee>
+   <Containee
+      Name="TaskRun"
+      FullName="com.cylande.unitedretail.batch.business.entity.TaskRun"
+      ObjectType="Entity" >
+   </Containee>
+</JboPackage>

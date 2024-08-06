@@ -1,0 +1,40 @@
+<batch name="GTQueryDBSelect">
+  <description>Batch permettant de tester le service d'extraction de données à partir d'une requête SQL</description>
+  <sequence>
+    <batch ref="GTQueryDBSelectTreatment"/>
+  </sequence>
+</batch>
+
+<batch name="GTQueryDBSelectTreatment">
+<description>Test des règles métiers</description>
+<sequence>
+  <!--AnalyzeCostQuery-->
+  <!-- Contrôle des règles métiers -->
+  <task description="Tentative d'analyse de coût sans objet AnalyzeCostQueryType en entrée" ref="GTQueryDBSelectAnalyzeCostQuery" activeDomain="Test1" defaultDomain="default"/>
+  <task description="Tentative d'analyse de coût sans qryStatement en entrée" ref="GTQueryDBSelectAnalyzeCostQuery" activeDomain="Test2" defaultDomain="default"/>
+  <task description="Tentative d'analyse de coût avec qryStatement vide en entrée" ref="GTQueryDBSelectAnalyzeCostQuery" activeDomain="Test3" defaultDomain="default"/>
+  <task description="Tentative d'analyse de coût d'une requête mal formée" ref="GTQueryDBSelectAnalyzeCostQuery" activeDomain="Test4" defaultDomain="default"/>
+  <task description="Tentative d'analyse de coût d'une requête ne commençant par SELECT" ref="GTQueryDBSelectAnalyzeCostQuery" activeDomain="Test5" defaultDomain="default"/>
+  <task description="Analyse de coût d'une requête" ref="GTQueryDBSelectAnalyzeCostQuery" activeDomain="Test6" defaultDomain="default"/>
+
+  <!-- QuerySelect-->
+  <!-- Contrôle des règles métiers -->
+  <task description="Tentative d'exécution d'une requete mal formée" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test1" defaultDomain="default"/>
+  <task description="Tentative d'exécution d'une requete ne commençant par SELECT" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test2" defaultDomain="default"/>
+  <task description="Tentative d'exécution d'une requete SELECT FOR UPDATE" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test3" defaultDomain="default"/>
+  <task description="Tentative d'exécution d'une requete SELECT de plus de 30 colonnes" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test4" defaultDomain="default"/>
+  <!-- Execution de différentes requetes -->
+  <task description="Cas qui ne retourne aucun résultat" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test5" defaultDomain="default"/>
+  <task description="cas avec une requete qui retourne 5 lignes avec un paquet de 5" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test6" defaultDomain="default"/>
+  <task description="cas avec une requete qui retourne 5 lignes avec un paquet de 2" ref="GTQueryDBSelectQuerySelectBy2" activeDomain="Test7" defaultDomain="default"/>
+  <task description="cas avec une requete qui retourne 10 lignes avec un paquet de 5" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test8" defaultDomain="default"/>
+  <task description="cas avec une requete qui retourne plusieurs types de dates avec un formatage MM/DD/YYYY HH24:NN:SS (no scenario)" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test9" defaultDomain="default"/>
+  <task description="cas avec une requete qui retourne plusieurs types de nombres réels avec un séparateur decimal = 'v' (no scenario)" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test10" defaultDomain="default"/>
+  <task description="Tentative d'exécution d'une requête sans objet QuerySelectType en entrée" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test11" defaultDomain="default"/>
+  <task description="Tentative d'exécution d'une requête sans qryStatement en entrée" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test12" defaultDomain="default"/>
+  <task description="Tentative d'exécution d'une requête qryStatement vide en entrée" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test13" defaultDomain="default"/>
+  <task description="Tentative d'exécution d'une requête dont le coût dépasse celui autorisé par le scénario (2)" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test14" defaultDomain="default"/>
+  <task description="cas avec une requête avec un scénario (costMax=0)" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test15" defaultDomain="default"/>
+  <task description="cas avec une requête dont le coût ne dépasse pas celui autorisé par le scénario (100)" ref="GTQueryDBSelectQuerySelectBy5" activeDomain="Test16" defaultDomain="default"/>
+</sequence>
+</batch>

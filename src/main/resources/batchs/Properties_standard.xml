@@ -1,0 +1,6 @@
+<!-- Properties -->
+	<property name="QUERYSELECT_QRYSTATEMENT" value="" domain="default"/>
+	<property name="QUERYSELECT_DATEFORMAT" value="dd/MM/yyyy" domain="default"/>
+	<property name="QUERYSELECT_DECIMALSEPARATOR" value="," domain="default"/>
+	<property name="QUERYSELECT_COSTMAX" value="1000" domain="default"/>
+  <property name="QUERYSELECT_QUOTEDSTRINGCAR" value="&quot;" domain="default"/>

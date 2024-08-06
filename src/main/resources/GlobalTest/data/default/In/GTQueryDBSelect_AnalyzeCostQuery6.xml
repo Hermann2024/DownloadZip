@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analyzeCostQueryType>
+  <qryStatement>
+    SELECT p.Code, p.Creation_Time, p.Modification_Time, p.Modification_User_Code, p.External_Reference,
+    i.Code ItemCode, i.Collection_Code, i.Collection_Element_Code, i.Color_Code, i.Size_Id, i.Variant_Id, i.State_Code,
+    ipp.*
+    FROM Product p
+    RIGHT JOIN Item i ON i.Product_Id = p.ID
+    RIGHT JOIN ITEM_SELLING_PRICE_BU ipp ON ipp.Item_Id = i.Id
+    WHERE (i.id &gt;= 1 AND i.id &lt;= 5)
+  </qryStatement>
+</analyzeCostQueryType>

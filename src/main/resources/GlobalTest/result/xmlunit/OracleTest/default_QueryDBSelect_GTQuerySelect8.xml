@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queryResultType>
+  <values>
+    <valueField1>CODE</valueField1>
+    <valueField2>CREATION_TIME</valueField2>
+    <valueField3>MODIFICATION_TIME</valueField3>
+    <valueField4>MODIFICATION_USER_CODE</valueField4>
+    <valueField5>EXTERNAL_REFERENCE</valueField5>
+    <valueField6>ITEMCODE</valueField6>
+    <valueField7>COLLECTION_CODE</valueField7>
+    <valueField8>COLLECTION_ELEMENT_CODE</valueField8>
+    <valueField9>COLOR_CODE</valueField9>
+    <valueField10>SIZE_ID</valueField10>
+    <valueField11>VARIANT_ID</valueField11>
+    <valueField12>STATE_CODE</valueField12>
+    <valueField13>CREATION_TIME</valueField13>
+    <valueField14>CREATION_USER_CODE</valueField14>
+    <valueField15>MODIFICATION_TIME</valueField15>
+    <valueField16>MODIFICATION_USER_CODE</valueField16>
+    <valueField17>BUSINESS_UNIT_ID</valueField17>
+    <valueField18>ITEM_ID</valueField18>
+    <valueField19>PRICE_TYPE_CODE</valueField19>
+    <valueField20>ID</valueField20>
+    <valueField21>PRICE_CURRENCY</valueField21>
+    <valueField22>PRICE_VALUE</valueField22>
+    <valueField23>FREE</valueField23>
+    <valueField24>NO_DISCOUNT</valueField24>
+    <valueField25>START_DATE</valueField25>
+    <valueField26>END_DATE</valueField26>
+    <valueField27>COLLECTION_CODE</valueField27>
+    <valueField28>COLLECTION_ELEMENT_CODE</valueField28>
+    <valueField29>VAT_CODE</valueField29>
+    <valueField30>DELETION_DATE</valueField30>
+  </values>
+  <values>
+    <valueField1>C11005</valueField1>
+    <valueField2>2020-08-09 23:43:37.313</valueField2>
+    <valueField3>2020-08-10 05:57:39.405</valueField3>
+    <valueField4>admin</valueField4>
+    <valueField6>C1100513</valueField6>
+    <valueField7>SAI</valueField7>
+    <valueField8>E11</valueField8>
+    <valueField9>DOR</valueField9>
+    <valueField10>3</valueField10>
+    <valueField12>P</valueField12>
+    <valueField13>2020-08-09 23:43:38.299</valueField13>
+    <valueField14>admin</valueField14>
+    <valueField15>2020-08-09 23:43:38.31</valueField15>
+    <valueField16>admin</valueField16>
+    <valueField17>11</valueField17>
+    <valueField18>33</valueField18>
+    <valueField19>INI</valueField19>
+    <valueField20>1</valueField20>
+    <valueField21>EUR</valueField21>
+    <valueField22>230</valueField22>
+    <valueField25>2020-08-10 00:00:00</valueField25>
+    <valueField29>3</valueField29>
+  </values>
+  <values>
+    <valueField1>C11005</valueField1>
+    <valueField2>2020-08-09 23:43:37.313</valueField2>
+    <valueField3>2020-08-10 05:57:39.405</valueField3>
+    <valueField4>admin</valueField4>
+    <valueField6>C1100514</valueField6>
+    <valueField7>SAI</valueField7>
+    <valueField8>E11</valueField8>
+    <valueField9>DOR</valueField9>
+    <valueField10>4</valueField10>
+    <valueField12>P</valueField12>
+    <valueField13>2020-08-09 23:43:38.32</valueField13>
+    <valueField14>admin</valueField14>
+    <valueField15>2020-08-09 23:43:38.331</valueField15>
+    <valueField16>admin</valueField16>
+    <valueField17>11</valueField17>
+    <valueField18>34</valueField18>
+    <valueField19>INI</valueField19>
+    <valueField20>1</valueField20>
+    <valueField21>EUR</valueField21>
+    <valueField22>230</valueField22>
+    <valueField25>2020-08-10 00:00:00</valueField25>
+    <valueField29>3</valueField29>
+  </values>
+  <values>
+    <valueField1>C11005</valueField1>
+    <valueField2>2020-08-09 23:43:37.313</valueField2>
+    <valueField3>2020-08-10 05:57:39.405</valueField3>
+    <valueField4>admin</valueField4>
+    <valueField6>C1100515</valueField6>
+    <valueField7>SAI</valueField7>
+    <valueField8>E11</valueField8>
+    <valueField9>DOR</valueField9>
+    <valueField10>5</valueField10>
+    <valueField12>P</valueField12>
+    <valueField13>2020-08-09 23:43:38.341</valueField13>
+    <valueField14>admin</valueField14>
+    <valueField15>2020-08-09 23:43:38.351</valueField15>
+    <valueField16>admin</valueField16>
+    <valueField17>11</valueField17>
+    <valueField18>35</valueField18>
+    <valueField19>INI</valueField19>
+    <valueField20>1</valueField20>
+    <valueField21>EUR</valueField21>
+    <valueField22>230</valueField22>
+    <valueField25>2020-08-10 00:00:00</valueField25>
+    <valueField29>3</valueField29>
+  </values>
+  <values>
+    <valueField1>C11005</valueField1>
+    <valueField2>2020-08-09 23:43:37.313</valueField2>
+    <valueField3>2020-08-10 05:57:39.405</valueField3>
+    <valueField4>admin</valueField4>
+    <valueField6>C1100516</valueField6>
+    <valueField7>SAI</valueField7>
+    <valueField8>E11</valueField8>
+    <valueField9>DOR</valueField9>
+    <valueField10>6</valueField10>
+    <valueField12>P</valueField12>
+    <valueField13>2020-08-09 23:43:38.36</valueField13>
+    <valueField14>admin</valueField14>
+    <valueField15>2020-08-09 23:43:38.371</valueField15>
+    <valueField16>admin</valueField16>
+    <valueField17>11</valueField17>
+    <valueField18>36</valueField18>
+    <valueField19>INI</valueField19>
+    <valueField20>1</valueField20>
+    <valueField21>EUR</valueField21>
+    <valueField22>230</valueField22>
+    <valueField25>2020-08-10 00:00:00</valueField25>
+    <valueField29>3</valueField29>
+  </values>
+  <values>
+    <valueField1>C11005</valueField1>
+    <valueField2>2020-08-09 23:43:37.313</valueField2>
+    <valueField3>2020-08-10 05:57:39.405</valueField3>
+    <valueField4>admin</valueField4>
+    <valueField6>C1100517</valueField6>
+    <valueField7>SAI</valueField7>
+    <valueField8>E11</valueField8>
+    <valueField9>DOR</valueField9>
+    <valueField10>7</valueField10>
+    <valueField12>P</valueField12>
+    <valueField13>2020-08-09 23:43:38.38</valueField13>
+    <valueField14>admin</valueField14>
+    <valueField15>2020-08-09 23:43:38.391</valueField15>
+    <valueField16>admin</valueField16>
+    <valueField17>11</valueField17>
+    <valueField18>37</valueField18>
+    <valueField19>INI</valueField19>
+    <valueField20>1</valueField20>
+    <valueField21>EUR</valueField21>
+    <valueField22>230</valueField22>
+    <valueField25>2020-08-10 00:00:00</valueField25>
+    <valueField29>3</valueField29>
+  </values>
+  <values>
+    <valueField1>C11005</valueField1>
+    <valueField2>2020-08-09 23:43:37.313</valueField2>
+    <valueField3>2020-08-10 05:57:39.405</valueField3>
+    <valueField4>admin</valueField4>
+    <valueField6>C1100523</valueField6>
+    <valueField7>SAI</valueField7>
+    <valueField8>E11</valueField8>
+    <valueField9>BIS</valueField9>
+    <valueField10>3</valueField10>
+    <valueField12>P</valueField12>
+    <valueField13>2020-08-09 23:43:38.4</valueField13>
+    <valueField14>admin</valueField14>
+    <valueField15>2020-08-09 23:43:38.41</valueField15>
+    <valueField16>admin</valueField16>
+    <valueField17>11</valueField17>
+    <valueField18>38</valueField18>
+    <valueField19>INI</valueField19>
+    <valueField20>1</valueField20>
+    <valueField21>EUR</valueField21>
+    <valueField22>230</valueField22>
+    <valueField25>2020-08-10 00:00:00</valueField25>
+    <valueField29>3</valueField29>
+  </values>
+  <values>
+    <valueField1>C11005</valueField1>
+    <valueField2>2020-08-09 23:43:37.313</valueField2>
+    <valueField3>2020-08-10 05:57:39.405</valueField3>
+    <valueField4>admin</valueField4>
+    <valueField6>C1100524</valueField6>
+    <valueField7>SAI</valueField7>
+    <valueField8>E11</valueField8>
+    <valueField9>BIS</valueField9>
+    <valueField10>4</valueField10>
+    <valueField12>P</valueField12>
+    <valueField13>2020-08-09 23:43:38.419</valueField13>
+    <valueField14>admin</valueField14>
+    <valueField15>2020-08-09 23:43:38.429</valueField15>
+    <valueField16>admin</valueField16>
+    <valueField17>11</valueField17>
+    <valueField18>39</valueField18>
+    <valueField19>INI</valueField19>
+    <valueField20>1</valueField20>
+    <valueField21>EUR</valueField21>
+    <valueField22>230</valueField22>
+    <valueField25>2020-08-10 00:00:00</valueField25>
+    <valueField29>3</valueField29>
+  </values>
+  <values>
+    <valueField1>C11005</valueField1>
+    <valueField2>2020-08-09 23:43:37.313</valueField2>
+    <valueField3>2020-08-10 05:57:39.405</valueField3>
+    <valueField4>admin</valueField4>
+    <valueField6>C1100525</valueField6>
+    <valueField7>SAI</valueField7>
+    <valueField8>E11</valueField8>
+    <valueField9>BIS</valueField9>
+    <valueField10>5</valueField10>
+    <valueField12>P</valueField12>
+    <valueField13>2020-08-09 23:43:38.438</valueField13>
+    <valueField14>admin</valueField14>
+    <valueField15>2020-08-09 23:43:38.448</valueField15>
+    <valueField16>admin</valueField16>
+    <valueField17>11</valueField17>
+    <valueField18>40</valueField18>
+    <valueField19>INI</valueField19>
+    <valueField20>1</valueField20>
+    <valueField21>EUR</valueField21>
+    <valueField22>230</valueField22>
+    <valueField25>2020-08-10 00:00:00</valueField25>
+    <valueField29>3</valueField29>
+  </values>
+  <values>
+    <valueField1>C11005</valueField1>
+    <valueField2>2020-08-09 23:43:37.313</valueField2>
+    <valueField3>2020-08-10 05:57:39.405</valueField3>
+    <valueField4>admin</valueField4>
+    <valueField6>C1100526</valueField6>
+    <valueField7>SAI</valueField7>
+    <valueField8>E11</valueField8>
+    <valueField9>BIS</valueField9>
+    <valueField10>6</valueField10>
+    <valueField12>P</valueField12>
+    <valueField13>2020-08-09 23:43:38.457</valueField13>
+    <valueField14>admin</valueField14>
+    <valueField15>2020-08-09 23:43:38.467</valueField15>
+    <valueField16>admin</valueField16>
+    <valueField17>11</valueField17>
+    <valueField18>41</valueField18>
+    <valueField19>INI</valueField19>
+    <valueField20>1</valueField20>
+    <valueField21>EUR</valueField21>
+    <valueField22>230</valueField22>
+    <valueField25>2020-08-10 00:00:00</valueField25>
+    <valueField29>3</valueField29>
+  </values>
+  <values>
+    <valueField1>C11005</valueField1>
+    <valueField2>2020-08-09 23:43:37.313</valueField2>
+    <valueField3>2020-08-10 05:57:39.405</valueField3>
+    <valueField4>admin</valueField4>
+    <valueField6>C1100527</valueField6>
+    <valueField7>SAI</valueField7>
+    <valueField8>E11</valueField8>
+    <valueField9>BIS</valueField9>
+    <valueField10>7</valueField10>
+    <valueField12>P</valueField12>
+    <valueField13>2020-08-09 23:43:38.476</valueField13>
+    <valueField14>admin</valueField14>
+    <valueField15>2020-08-09 23:43:38.484</valueField15>
+    <valueField16>admin</valueField16>
+    <valueField17>11</valueField17>
+    <valueField18>42</valueField18>
+    <valueField19>INI</valueField19>
+    <valueField20>1</valueField20>
+    <valueField21>EUR</valueField21>
+    <valueField22>230</valueField22>
+    <valueField25>2020-08-10 00:00:00</valueField25>
+    <valueField29>3</valueField29>
+  </values>
+</queryResultType>

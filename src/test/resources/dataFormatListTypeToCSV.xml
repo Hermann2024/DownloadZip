@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataFormatListType>
+	<values>
+		<id>461012</id>
+		<address>127 rue "Paul Bert"</address>
+		<codes>
+			<code>azerty</code>
+		</codes>
+		<externalCodes>
+			<code>abcd</code>
+		</externalCodes>
+		<totalAmount>
+			<value>7266.845</value>
+		</totalAmount>
+		<totalAmount>
+			<value>-7266.855</value>
+		</totalAmount>
+		<histoDates>
+			<startDate>1979-11-13+01:00</startDate>
+			<modificationTime>2016-02-04T09:13:09.588+01:00</modificationTime>
+		</histoDates>
+	</values>
+</dataFormatListType>

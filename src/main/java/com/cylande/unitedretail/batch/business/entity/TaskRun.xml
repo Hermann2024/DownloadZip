@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="TaskRun"
+   DBObjectType="table"
+   DBObjectName="TASK_RUN"
+   AliasName="TaskRun"
+   BindingStyle="JDBC"
+   UseGlueCode="false"
+   RowClass="com.cylande.unitedretail.batch.business.entity.TaskRunImpl"
+   DefClass="com.cylande.unitedretail.framework.business.jbo.server.EntityDefImpl"
+   CollClass="com.cylande.unitedretail.framework.business.jbo.server.EntityCache" >
+   <Properties>
+      <Property Name ="IDX_1" Value ="PARENT_ID" />
+      <Property Name ="IDX_2" Value ="TASK_CODE,STEP,SITE_CODE" />
+   </Properties>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+      <Attr Name="_codeGenFlag2" Value="Access" />
+   </DesignTime>
+   <Attribute
+      Name="CreationTime"
+      IsUpdateable="while_insert"
+      ColumnName="CREATION_TIME"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Timestamp"
+      ColumnType="TIMESTAMP"
+      SQLType="TIMESTAMP"
+      TableName="TASK_RUN"
+      HistoryColumn="DateHistory" >
+   </Attribute>
+   <Attribute
+      Name="CreationUserCode"
+      IsUpdateable="while_insert"
+      Precision="16"
+      ColumnName="CREATION_USER_CODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN"
+      HistoryColumn="UserHistory" >
+   </Attribute>
+   <Attribute
+      Name="ModificationTime"
+      ColumnName="MODIFICATION_TIME"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Timestamp"
+      ColumnType="TIMESTAMP"
+      SQLType="TIMESTAMP"
+      TableName="TASK_RUN"
+      HistoryColumn="DateHistory" >
+   </Attribute>
+   <Attribute
+      Name="ModificationUserCode"
+      Precision="16"
+      ColumnName="MODIFICATION_USER_CODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN"
+      HistoryColumn="UserHistory" >
+   </Attribute>
+   <Attribute
+      Name="SiteCode"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      Precision="16"
+      ColumnName="SITE_CODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="Path"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      Precision="256"
+      ColumnName="TASK_CODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="Id"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      ColumnName="ID"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Integer"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TASK_RUN"
+      PrimaryKey="true" >
+   </Attribute>
+   <Attribute
+      Name="ParentId"
+      ColumnName="PARENT_ID"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Integer"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="StartTime"
+      ColumnName="START_TIME"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Timestamp"
+      ColumnType="TIMESTAMP"
+      SQLType="TIMESTAMP"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="EndTime"
+      ColumnName="END_TIME"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Timestamp"
+      ColumnType="TIMESTAMP"
+      SQLType="TIMESTAMP"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="Status"
+      ColumnName="STATE"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Booleans"
+      ColumnType="NUMBER"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="WorkLoad"
+      ColumnName="WORK_LOAD"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Integer"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="WorkProgress"
+      ColumnName="WORK_PROGRESS"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Integer"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="Step"
+      Precision="256"
+      ColumnName="STEP"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="Domain"
+      Precision="64"
+      ColumnName="DOMAIN"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="TaskType"
+      Precision="16"
+      ColumnName="TASK_TYPE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="ProcessName"
+      Precision="128"
+      ColumnName="PROCESS_NAME"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="ProcessDomain"
+      Precision="64"
+      ColumnName="PROCESS_DOMAIN"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="InputName"
+      Precision="128"
+      ColumnName="INPUT_NAME"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="InputDomain"
+      Precision="64"
+      ColumnName="INPUT_DOMAIN"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="ResponseName"
+      Precision="128"
+      ColumnName="RESPONSE_NAME"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="ResponseDomain"
+      Precision="64"
+      ColumnName="RESPONSE_DOMAIN"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="RejectName"
+      Precision="128"
+      ColumnName="REJECT_NAME"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="RejectDomain"
+      Precision="64"
+      ColumnName="REJECT_DOMAIN"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <Attribute
+      Name="InError"
+      ColumnName="IN_ERROR"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Booleans"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="TASK_RUN" >
+   </Attribute>
+   <AccessorAttribute
+      Name="TaskAudit"
+      Association="com.cylande.unitedretail.batch.business.entity.association.TaskAuditsOfTaskRun"
+      AssociationEnd="com.cylande.unitedretail.batch.business.entity.association.TaskAuditsOfTaskRun.TaskAudit"
+      AssociationOtherEnd="com.cylande.unitedretail.batch.business.entity.association.TaskAuditsOfTaskRun.TaskRun"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="FileProviderTrace"
+      Association="com.cylande.unitedretail.batch.business.entity.association.FileProviderTraceOfTaskRun"
+      AssociationEnd="com.cylande.unitedretail.batch.business.entity.association.FileProviderTraceOfTaskRun.FileProviderTrace"
+      AssociationOtherEnd="com.cylande.unitedretail.batch.business.entity.association.FileProviderTraceOfTaskRun.TaskRun"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="BatchRun"
+      Association="com.cylande.unitedretail.batch.business.entity.association.TaskRunsOfBatchRun"
+      AssociationEnd="com.cylande.unitedretail.batch.business.entity.association.TaskRunsOfBatchRun.BatchRun"
+      AssociationOtherEnd="com.cylande.unitedretail.batch.business.entity.association.TaskRunsOfBatchRun.TaskRun"
+      Type="com.cylande.unitedretail.batch.business.entity.BatchRunImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="SysC001795365" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.Path" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;TASK_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001795365" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001795366" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001795366" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001795367" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.SiteCode" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;SITE_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001795367" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002747946" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.SiteCode" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;SITE_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C002747946" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002747947" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.Path" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;TASK_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C002747947" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002747948" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C002747948" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002788540" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.Path" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;TASK_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C002788540" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002788541" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C002788541" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002788542" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.SiteCode" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;SITE_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C002788542" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="TaskRunIdCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_DBObjectName" Value="TASK_RUN_ID_CHECK" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="TaskRunPathCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.Path" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;TASK_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_DBObjectName" Value="TASK_RUN_TASK_CODE_CHECK" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="TaskRunPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_isPrimary" Value="true" />
+         <Attr Name="_DBObjectName" Value="TASK_RUN_PRIMARY_KEY" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="TaskRunSiteCodeCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.SiteCode" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;SITE_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_DBObjectName" Value="TASK_RUN_SITE_CODE_CHECK" />
+      </DesignTime>
+   </Key>
+   <MethodValidationBean
+      xmlns="http://xmlns.oracle.com/adfm/validation"
+      MethodName="validateStartEndDate" >
+   </MethodValidationBean>
+</Entity>

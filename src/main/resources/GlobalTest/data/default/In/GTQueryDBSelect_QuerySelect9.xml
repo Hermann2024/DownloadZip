@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<querySelectType>
+  <qryStatement>
+    SELECT TO_TIMESTAMP('23/06/2021 10:22:35.123000', 'DD/MM/YYYY HH24:MI:SS.FF') Date1,
+           TO_TIMESTAMP(NULL) Date2,
+           TO_TIMESTAMP('23/06/2021', 'DD/MM/YYYY') Date3
+    FROM DUAL
+  </qryStatement>
+  <dateFormat>'Le' dd MMMM yyyy 'à' HH:mm:ss</dateFormat>
+</querySelectType>

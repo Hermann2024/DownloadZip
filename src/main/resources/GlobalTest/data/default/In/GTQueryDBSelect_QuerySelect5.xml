@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<querySelectType>
+  <qryStatement>
+    SELECT p.Code
+    FROM Product p
+    WHERE p.Code = 'NONE'
+  </qryStatement>
+</querySelectType>

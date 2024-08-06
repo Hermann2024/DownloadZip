@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="BatchInProgressView"
+   OrderBy="START_TIME DESC"
+   BindingStyle="JDBC"
+   CustomQuery="true"
+   RowClass="com.cylande.unitedretail.batch.business.query.BatchInProgressViewRowImpl"
+   ComponentClass="com.cylande.unitedretail.batch.business.query.BatchInProgressViewImpl"
+   ComponentInterface="com.cylande.unitedretail.batch.business.query.common.BatchInProgressView"
+   ClientProxyName="com.cylande.unitedretail.batch.business.query.client.BatchInProgressViewClient"
+   RowInterface="com.cylande.unitedretail.batch.business.query.common.BatchInProgressViewRow"
+   ClientRowProxyName="com.cylande.unitedretail.batch.business.query.client.BatchInProgressViewRowClient"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <SQLQuery><![CDATA[
+SELECT BatchRun.CREATION_TIME, 
+       BatchRun.CREATION_USER_CODE, 
+       BatchRun.MODIFICATION_TIME, 
+       BatchRun.MODIFICATION_USER_CODE, 
+       BatchRun.BATCH_CODE, 
+       BatchRun.ID, 
+       BatchRun.PARENT_ID, 
+       BatchRun.START_TIME, 
+       BatchRun.END_TIME, 
+       BatchRun.STATE, 
+       BatchRun.DOMAIN, 
+       BatchRun.SITE_CODE, 
+       BatchRun.BATCH_TYPE, 
+       BatchRun.BATCH_MODE,
+       BatchRun.IN_ERROR
+FROM BATCH_RUN BatchRun
+   ]]></SQLQuery>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_isExpertMode" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <ViewAttribute
+      Name="CreationTime"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="TIMESTAMP"
+      AliasName="CREATION_TIME"
+      Expression="CREATION_TIME"
+      SQLType="DATE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="11" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationUserCode"
+      IsPersistent="false"
+      Precision="16"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="CREATION_USER_CODE"
+      Expression="CREATION_USER_CODE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="16" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ModificationTime"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="TIMESTAMP"
+      AliasName="MODIFICATION_TIME"
+      Expression="MODIFICATION_TIME"
+      SQLType="DATE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="11" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ModificationUserCode"
+      IsPersistent="false"
+      Precision="16"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="MODIFICATION_USER_CODE"
+      Expression="MODIFICATION_USER_CODE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="16" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BatchCode"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="256"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="BATCH_CODE"
+      Expression="BATCH_CODE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="256" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      AliasName="ID"
+      Expression="ID"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParentId"
+      IsPersistent="false"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      AliasName="PARENT_ID"
+      Expression="PARENT_ID"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="StartTime"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="TIMESTAMP"
+      AliasName="START_TIME"
+      Expression="START_TIME"
+      SQLType="DATE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="11" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="EndTime"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Date"
+      ColumnType="TIMESTAMP"
+      AliasName="END_TIME"
+      Expression="END_TIME"
+      SQLType="DATE" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="11" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="State"
+      IsPersistent="false"
+      Precision="38"
+      Scale="0"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      AliasName="STATE"
+      Expression="STATE"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Domain"
+      IsPersistent="false"
+      Precision="64"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="DOMAIN"
+      Expression="DOMAIN"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="64" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SiteCode"
+      IsPersistent="false"
+      IsNotNull="true"
+      Precision="16"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="SITE_CODE"
+      Expression="SITE_CODE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="16" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BatchType"
+      IsPersistent="false"
+      Precision="16"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="BATCH_TYPE"
+      Expression="BATCH_TYPE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="16" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BatchMode"
+      IsPersistent="false"
+      Precision="16"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      AliasName="BATCH_MODE"
+      Expression="BATCH_MODE"
+      SQLType="VARCHAR" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="16" />
+      </DesignTime>
+   </ViewAttribute>
+   <ViewAttribute
+      Name="InError"
+      IsPersistent="false"
+      Type="oracle.jbo.domain.Number"
+      ColumnType="NUMBER"
+      AliasName="IN_ERROR"
+      Expression="IN_ERROR"
+      SQLType="NUMERIC" >
+      <DesignTime>
+         <Attr Name="_DisplaySize" Value="22" />
+      </DesignTime>
+   </ViewAttribute>
+</ViewObject>

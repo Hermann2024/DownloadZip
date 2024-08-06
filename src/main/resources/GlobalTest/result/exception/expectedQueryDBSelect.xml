@@ -1,0 +1,352 @@
+<!-- Tentative d'exécution d'une requete ne commençant pas SELECT -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test2</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0190</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test2</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'exécution d'une requete SELECT FOR UPDATE -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test3</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0190</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test3</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'exécution d'une requete mal formée -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test1</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0196</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test1</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'exécution d'une requete SELECT de plus de 30 colonnes -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test4</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0192</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test4</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'exécution d'une requête sans objet QuerySelectType en entrée -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test11</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0194</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test11</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'exécution d'une requête sans qryStatement en entrée -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test12</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0194</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test12</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'exécution d'une requête qryStatement vide en entrée -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test13</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0194</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test13</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'exécution d'une requête dont le coût dépasse celui autorisé par le scénario (2) -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test14</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0195</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test14</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'analyse de coût sans objet AnalyzeCostQueryType en entrée -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test1</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0194</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test1</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'analyse de coût sans qryStatement en entrée -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test2</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0194</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test2</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'analyse de coût avec qryStatement vide en entrée -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test3</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0194</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test3</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'analyse de coût d'une requete mal formée -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test4</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0196</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test4</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<!-- Tentative d'analyse de coût d'une requête ne commençant par SELECT -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test5</domain>
+  <module>COMMON</module>
+  <dbtype>oracle</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0190</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test5</domain>
+  <module>COMMON</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+
+<!-- Traitements normalement OK mais non implémentés pour ce SGBD -->
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectAnalyzeCostQuery</taskName>
+  <domain>Test6</domain>
+  <module>BATCH</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test5</domain>
+  <module>BATCH</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test6</domain>
+  <module>BATCH</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy2</taskName>
+  <domain>Test7</domain>
+  <module>BATCH</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test8</domain>
+  <module>BATCH</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test9</domain>
+  <module>BATCH</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test10</domain>
+  <module>BATCH</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test15</domain>
+  <module>BATCH</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>
+<values>
+  <taskName>GlobalTest.GTBatch.GTQueryDBSelect.GTQueryDBSelectTreatment.GTQueryDBSelectQuerySelectBy5</taskName>
+  <domain>Test16</domain>
+  <module>BATCH</module>
+  <dbtype>mssql</dbtype>
+  <dbtype>pgsql</dbtype>
+  <exceptions>
+    <errorCode>URHO-ENG-BAT-IT0193</errorCode>
+  </exceptions>
+</values>

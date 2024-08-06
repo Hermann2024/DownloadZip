@@ -1,0 +1,53 @@
+<!-- QuerySelect -->
+<processor name="GTQueryDBSelectQuerySelect">
+  <variables>
+    <variable name="response"/>
+    <variable name="context">
+      <value>
+        <contextType>
+          <businessUnit>${BUSINESS_UNIT}</businessUnit>
+          <language>${LANGUAGE}</language>
+        </contextType>
+      </value>
+    </variable>
+  </variables>
+  <block>
+    <service name="GTQueryDBSelectQuerySelect" operation="querySelect" refservice="QueryDBSelectManagerService"  main="true">
+      <params>
+        <input/>
+        <scenario/>
+        <context variable="context"/>
+      </params>
+      <return variable="response"/>
+    </service>
+  </block>
+  <output return="response"/>
+</processor>
+
+<!-- AnalyzeCostQuery -->
+<processor name="GTQueryDBSelectAnalyzeCostQuery">
+  <variables>
+    <variable name="response"/>
+    <variable name="context">
+      <value>
+        <contextType>
+          <businessUnit>${BUSINESS_UNIT}</businessUnit>
+          <language>${LANGUAGE}</language>
+        </contextType>
+      </value>
+    </variable>
+  </variables>
+  <block>
+    <service name="GTQueryDBSelectAnalyzeCostQuery" operation="analyzeCostQuery" refservice="QueryDBSelectManagerService">
+      <params>
+        <input/>
+        <scenario/>
+        <context variable="context"/>
+      </params>
+      <return variable="response"/>
+    </service>
+  </block>
+  <output return="response"/>
+</processor>
+
+

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BatchLauncher" basedir="." default="run">
+
+    <!-- definition taches fikin -->
+    <taskdef resource="net/sf/fikin/ant/antlib.xml">
+        <classpath>
+            <path id="fikin.classpath">
+                <fileset dir="lib/fikin-ant-1.7.3">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </path>
+        </classpath>
+    </taskdef>
+
+    <!-- set des properties de configuration-->
+    <property file="build.properties"/>
+
+    <!--unmodifiable properties -->
+    <property name="tmp.dir" value="tmp"/>
+    <!-- fichier temporaire utiliser pour stocker le resultat du get http -->
+    <tempfile property="httpget.result.file" suffix=".xml" deleteonexit="true" destDir="${tmp.dir}"/>
+
+    <!-- fait un get http et set une properties LOGIN si un login est necessaire-->
+    <target name="HttpGet" >
+        <echo>http get ${url}</echo>
+        <!-- get initial pour acceder a une ressource protegee -->
+        <httpget url="${url}" logFile="${result.file}"/>
+        <condition property="LOGIN">
+            <isfileselected file="${result.file}">
+                <and>
+                    <contains text="loginForm" casesensitive="yes"/>
+                    <contains text="j_username" casesensitive="yes"/>
+                    <contains text="j_password" casesensitive="yes"/>
+                </and>
+            </isfileselected>
+        </condition>
+    </target>
+
+    <!-- realise le login FORM methode -->
+    <target name="login" if="LOGIN">
+        <!-- post pour simuler la saisie du user/password -->
+        <echo>login</echo>
+        <httppost url="${context_root}/j_security_check" logFile="${result.file}">
+            <post name="j_username" value="${user}"/>
+            <post name="j_password" value="${password}"/>
+        </httppost>
+        <condition property="LOGIN_FAIL">
+            <isfileselected file="${result.file}">
+                <and>
+                    <contains text="loginForm" casesensitive="yes"/>
+                    <contains text="j_username" casesensitive="yes"/>
+                    <contains text="j_password" casesensitive="yes"/>
+                </and>
+            </isfileselected>
+        </condition>
+        <!-- detection d'un retour vide (pour tomcat et weblogic qui ne font pas la redirection) -->
+        <condition property="NO_BODY">
+            <or>
+                <!-- pour tomcat -->
+                <not>
+                    <or>
+                        <length file="${result.file}" when="greater" length="0" />
+                        <isset property="LOGIN_FAIL"/>
+                    </or>
+                </not>
+                <!-- pour weblogic -->
+                <isfileselected file="${result.file}">
+                    <contains text="302 Moved Temporarily" casesensitive="yes"/>
+                </isfileselected>
+            </or>
+        </condition>
+        <echo>${NO_BODY}</echo>
+        <echo>${LOGIN_FAIL}</echo>
+        <!-- fail fait ici car par de retour de properties sur antcall -->
+        <fail message="Identification incorrecte !" if="LOGIN_FAIL" status="${login.fail}"/>
+    </target>
+
+    <target name="HttpGet2" if="NO_BODY">
+        <echo>http get ${url}</echo>
+        <!-- get initial pour acceder a une ressource protegee -->
+        <httpget url="${url}" logFile="${result.file}"/>
+    </target>
+
+    <!-- get http avec gestion de login  (FORM methode)-->
+    <target name="formAuthHttpGet" depends="HttpGet,login,HttpGet2" />
+
+    <!--
+ | init task :
+ | preparation de l'environement pour executer les batchs
+ +-->
+    <target name="init">
+        <mkdir dir="${tmp.dir}"/>
+    </target>
+
+    <target name="completevars" if="batch.vars">
+         <property name="batch.vars.http" value="&amp;${batch.vars}"/>      
+ 	  </target>
+
+    <!-- lancement d'un batch -->
+    <target name="runBatch" depends="init,completevars">
+        <echo>lancement du batch ${name.batch}</echo>
+        <property name="batch.domain" value="default"/>
+        <property name="batch.vars.http" value=""/>
+        <antcall target="formAuthHttpGet">
+            <param name="url" value="${context_root}/batchEngine?action=execute&amp;batchName=${name.batch}&amp;domain=${batch.domain}${batch.vars.http}"/>
+            <param name="user" value="${batch.user}"/>
+            <param name="password" value="${batch.password}"/>
+            <param name="result.file" value="${httpget.result.file}"/>
+        </antcall>
+        <xmlproperty file="${httpget.result.file}"/>
+        <echo>le batch ${batch.name} a le numero = ${batch.id}</echo>
+        <condition property="START">
+            <isset property="batch.id" />
+        </condition>
+    </target>
+
+    <!--
+   | wait end
+   | param : batch.name
+   | param : batch.id
+   +--> 	
+    <target name="waitEnd" if="START">
+        <echo>batch name ${batch.name}</echo>
+        <echo>batch ID ${batch.id}</echo>
+        <echo>log file ${batch.log.file}</echo>
+        <!-- on attend la fin du batch -->
+        <echo>wait end of batch</echo>
+        <echo>end flag searched :${log.separator}END${log.separator}${batch.name}${log.separator}${batch.id}${log.separator}</echo>
+        <waitfor maxwait="${timeout.value}" 
+             maxwaitunit="${timeout.unit}" 
+             checkevery="${check.freq.value}"
+             checkeveryunit="${check.freq.unit}"
+             timeoutproperty="TIMEOUT">
+            <!-- on cherche  le marqueur de fin de batch -->
+            <or>
+                <and>
+                    <available file="${batch.log.file}"/>
+                    <isfileselected file="${batch.log.file}">
+                        <contains text="${log.separator}END${log.separator}${batch.name}${log.separator}${batch.id}${log.separator}" casesensitive="yes"/>
+                    </isfileselected>
+                </and>
+                <and>
+                    <available file="${batch.log.file.prec}"/>
+                    <isfileselected file="${batch.log.file.prec}">
+                        <contains text="${log.separator}END${log.separator}${batch.name}${log.separator}${batch.id}${log.separator}" casesensitive="yes"/>
+                    </isfileselected>
+                </and>
+            </or>
+        </waitfor>
+        <!-- si TIMEOUT n'est pas set c'est que le batch est terminé -->
+        <condition property="END">
+            <not>
+                <isset property="TIMEOUT" />
+            </not>
+        </condition>
+    </target>
+
+    <!--
+   | Error Control
+   | param : batch.name
+   | param : batch.id
+   +--> 	
+    <target name="controlError" if="END">
+        <echo>batch name ${batch.name}</echo>
+        <echo>batch ID ${batch.id}</echo>
+        <echo>log file ${batch.log.file}</echo>
+        <!-- on cherche a determiner l'existence d'erreur pour ce batch -->
+        <echo>control error of batch</echo>
+        <antcall target="formAuthHttpGet">
+            <param name="url" value="${context_root}/batchEngine?action=status&amp;batchId=${batch.id}&amp;batchName=${batch.name}"/>
+            <param name="user" value="${batch.user}"/>
+            <param name="password" value="${batch.password}"/>
+            <param name="result.file" value="${httpget.result.file}"/>
+        </antcall>
+        <xmlproperty file="${httpget.result.file}"/>
+        <!-- si TIMEOUT n'est pas set c'est que le batch est terminé -->
+        <condition property="ERROR">
+            <equals arg1="${batchReportType.error}" arg2="true"/>            
+        </condition>
+    </target>
+
+    <!--
+   | determine si le sript doit terminer en fail ou en success
+   +--> 	
+    <target name="render" >
+        <!-- fail si le batch ne s'est pas lancé -->
+        <fail message="le batch ${batch.name} ne s'est pas executé : ${error.message}" unless="START" status="${batch.notexist}"/>
+        <!-- fail si le batch est tombé en time out -->
+        <fail message="le batch ${batch.name} n'etait termine au bout de ${timeout.value} ${timeout.unit}" if="TIMEOUT" status="${batch.timeout}"/>
+        <!-- fail si le batch a leve des erreurs -->
+        <fail message="l'execution du batch ${batch.name} a genere des erreurs" if="ERROR" status="${batch.error}"/>
+    </target>
+
+    <!--
+   | mise au propre
+   +-->
+    <target name="clean">
+        <echo>delete ALL generated dir or file of run batch</echo>
+        <delete dir="${tmp.dir}" failonerror="false"/>
+    </target>
+
+    <target name="run" depends="runBatch,waitEnd,controlError,render" />
+
+</project>

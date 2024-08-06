@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="BatchRunView"
+   SelectList="BatchRun.CREATION_TIME, 
+       BatchRun.CREATION_USER_CODE, 
+       BatchRun.MODIFICATION_TIME, 
+       BatchRun.MODIFICATION_USER_CODE, 
+       BatchRun.BATCH_CODE, 
+       BatchRun.ID, 
+       BatchRun.PARENT_ID, 
+       BatchRun.START_TIME, 
+       BatchRun.END_TIME, 
+       BatchRun.STATE, 
+       BatchRun.DOMAIN, 
+       BatchRun.SITE_CODE, 
+       BatchRun.BATCH_TYPE, 
+       BatchRun.BATCH_MODE, 
+       BatchRun.IN_ERROR"
+   FromList="BATCH_RUN BatchRun"
+   BindingStyle="JDBC"
+   CustomQuery="false"
+   RowClass="com.cylande.unitedretail.batch.business.query.BatchRunViewRowImpl"
+   ComponentClass="com.cylande.unitedretail.batch.business.query.BatchRunViewImpl"
+   DefClass="com.cylande.unitedretail.framework.business.jbo.server.ViewDefImpl"
+   ComponentInterface="com.cylande.unitedretail.batch.business.query.common.BatchRunView"
+   ClientProxyName="com.cylande.unitedretail.batch.business.query.client.BatchRunViewClient"
+   RowInterface="com.cylande.unitedretail.batch.business.query.common.BatchRunViewRow"
+   ClientRowProxyName="com.cylande.unitedretail.batch.business.query.client.BatchRunViewRowClient"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="BatchRun"
+      Entity="com.cylande.unitedretail.batch.business.entity.BatchRun" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="CreationTime"
+      IsUpdateable="false"
+      EntityAttrName="CreationTime"
+      EntityUsage="BatchRun"
+      AliasName="CREATION_TIME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationUserCode"
+      IsUpdateable="false"
+      EntityAttrName="CreationUserCode"
+      EntityUsage="BatchRun"
+      AliasName="CREATION_USER_CODE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ModificationTime"
+      IsUpdateable="false"
+      EntityAttrName="ModificationTime"
+      EntityUsage="BatchRun"
+      AliasName="MODIFICATION_TIME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ModificationUserCode"
+      IsUpdateable="false"
+      EntityAttrName="ModificationUserCode"
+      EntityUsage="BatchRun"
+      AliasName="MODIFICATION_USER_CODE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Path"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      EntityAttrName="Path"
+      EntityUsage="BatchRun"
+      AliasName="BATCH_CODE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Id"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      EntityAttrName="Id"
+      EntityUsage="BatchRun"
+      AliasName="ID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ParentId"
+      EntityAttrName="ParentId"
+      EntityUsage="BatchRun"
+      AliasName="PARENT_ID" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="StartTime"
+      EntityAttrName="StartTime"
+      EntityUsage="BatchRun"
+      AliasName="START_TIME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="EndTime"
+      EntityAttrName="EndTime"
+      EntityUsage="BatchRun"
+      AliasName="END_TIME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Status"
+      EntityAttrName="Status"
+      EntityUsage="BatchRun"
+      AliasName="STATE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Domain"
+      EntityAttrName="Domain"
+      EntityUsage="BatchRun"
+      AliasName="DOMAIN" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="SiteCode"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      EntityAttrName="SiteCode"
+      EntityUsage="BatchRun"
+      AliasName="SITE_CODE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BatchType"
+      EntityAttrName="BatchType"
+      EntityUsage="BatchRun"
+      AliasName="BATCH_TYPE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BatchMode"
+      EntityAttrName="BatchMode"
+      EntityUsage="BatchRun"
+      AliasName="BATCH_MODE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="InError"
+      EntityAttrName="InError"
+      EntityUsage="BatchRun"
+      AliasName="IN_ERROR" >
+   </ViewAttribute>
+   <ViewLinkAccessor
+      Name="BatchRunChildrenView"
+      ViewLink="com.cylande.unitedretail.batch.business.query.link.BatchRunsOfBatchRunLink"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </ViewLinkAccessor>
+   <ViewLinkAccessor
+      Name="TaskRunChildrenView"
+      ViewLink="com.cylande.unitedretail.batch.business.query.link.TaskRunsOfBatchRunLink"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </ViewLinkAccessor>
+</ViewObject>

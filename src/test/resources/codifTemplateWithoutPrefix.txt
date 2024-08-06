@@ -1,0 +1,4 @@
+separator:;
+header:false
+0;codificationFreeDataListType
+1;values;detailCode;shortDescription

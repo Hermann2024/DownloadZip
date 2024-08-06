@@ -1,0 +1,3 @@
+<mapper name="QuerySelectMapper">
+  <template dir="template" file="QuerySelectMapper.txt"/>
+</mapper>

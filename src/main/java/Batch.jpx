@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+
+<JboProject
+   Name="Batch"
+   SeparateXMLFiles="true"
+   PackageName="" >
+   <DesignTime>
+      <Attr Name="_jbo.SQLBuilder" Value="SQL92" />
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_NamedConnection" Value="UnitedRetail" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_appModuleNames6" Value="com.cylande.unitedretail.batch.business.module.BatchApplicationModule" />
+      <Attr Name="_appModuleNames5" Value="com.cylande.unitedretail.batch.business.module.FileProviderTraceManagerModule" />
+      <Attr Name="_appModuleNames4" Value="com.cylande.unitedretail.batch.business.module.BatchRunManagerModule" />
+      <Attr Name="_appModuleNames3" Value="com.cylande.unitedretail.batch.business.module.TaskRunManagerModule" />
+      <Attr Name="_appModuleNames2" Value="com.cylande.unitedretail.batch.business.module.TaskAuditManagerModule" />
+      <Attr Name="_jprName" Value="../../../Batch.jpr" />
+      <Attr Name="_appModuleNames1" Value="com.cylande.unitedretail.batch.business.module.ProviderCrcManagerModule" />
+      <Attr Name="_appModuleNames0" Value="com.cylande.unitedretail.batch.business.module.BatchReportingModule" />
+   </DesignTime>
+   <Containee
+      Name="association"
+      FullName="com.cylande.unitedretail.batch.business.entity.association.association"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="entity"
+      FullName="com.cylande.unitedretail.batch.business.entity.entity"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="module"
+      FullName="com.cylande.unitedretail.batch.business.module.module"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="link"
+      FullName="com.cylande.unitedretail.batch.business.query.link.link"
+      ObjectType="JboPackage" >
+   </Containee>
+   <Containee
+      Name="query"
+      FullName="com.cylande.unitedretail.batch.business.query.query"
+      ObjectType="JboPackage" >
+   </Containee>
+</JboProject>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapperListType>
+  <values name="monMapper">
+    <xslfile dir="dir" fileName="file"/>
+  </values>
+  <values name="monMapper2">
+    <xslfile dir="dir" fileName="file"/>
+  </values>
+</mapperListType>

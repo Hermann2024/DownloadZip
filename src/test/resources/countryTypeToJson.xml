@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<countryType>
+	<code>CN</code>
+	<description>Chine</description>
+	<shortDescription>CHINE</shortDescription>
+	<translations>
+		<language>DE</language>
+	</translations>
+	<translations>
+		<language>EN</language>
+	</translations>
+	<translations>
+		<language>FR</language>
+		<description>Chine</description>
+		<shortDescription>CHINE</shortDescription>
+	</translations>
+	<translations>
+		<language>IT</language>
+	</translations>
+	<translations>
+		<language>JP</language>
+	</translations>
+	<currency>CNY</currency>
+	<isoCode>CN</isoCode>
+	<localizationCode>CN</localizationCode>
+</countryType>

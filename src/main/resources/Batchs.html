@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>BatchEngine</title>
+<link href="style/login/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background-color:#bcd1e5;">
+	<table height="100%" width="100%">
+		<tr valign="middle">
+			<td width="25%">
+				<p />
+			</td>
+			<td>
+				<center>
+					<h2>Batchs compos&eacute;s</h2>
+					<form action="batchEngine" method="get">
+						<input type="hidden" name="action" value="execute" />
+						<input type="hidden" name="xsl" value="true" />
+						<input type="hidden" name="defaultDomain" value="default" />
+						<select name="batchName" id="complexBatch">
+						</select>
+						<select name="domain">
+						</select>
+						<p />
+						<input type="checkbox" name="inputJson" /><label>input JSON</label>
+						<input type="checkbox" name="outputJson" /><label>output JSON</label>
+						<p />
+						<input type="submit" value="Lancer" />
+					</form>
+					<h2>Batchs unitaires</h2>
+					<form action="batchEngine" method="get">
+						<input type="hidden" name="action" value="execute" />
+						<input type="hidden" name="xsl" value="true" />
+						<input type="hidden" name="defaultDomain" value="default" />
+						<select name="batchName" id="simpleBatch">
+						</select>
+						<select name="domain">
+						</select>
+						<p />
+						<input type="checkbox" name="inputJson" /><label>input JSON</label>
+						<input type="checkbox" name="outputJson" /><label>output JSON</label>
+						<p />
+						<input type="submit" value="Lancer" />
+					</form>
+					<h2>Rechargement des batchs</h2>
+					<form action="batchEngine" method="get">
+						<input type="hidden" name="action" value="reload" />
+						<input type="hidden" name="xsl" value="true" />
+						<input type="submit" value="Lancer" />
+					</form>
+					<h2>Processeurs</h2>
+					<form action="processEngine" method="get">
+						<input type="hidden" name="action" value="execute" />
+						<input type="hidden" name="defaultDomain" value="default" />
+						<select name="processName">
+						</select>
+						<select name="domain">
+						</select>
+						<p />
+						<input type="submit" value="Lancer" />
+					</form>
+					<h2>Rechargement des process</h2>
+					<form action="processEngine" method="get">
+						<input type="hidden" name="action" value="reload" />
+						<input type="hidden" name="xsl" value="true" />
+						<input type="submit" value="Lancer" />
+					</form>
+				</center>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

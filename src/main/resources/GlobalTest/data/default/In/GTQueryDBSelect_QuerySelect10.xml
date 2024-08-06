@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<querySelectType>
+  <qryStatement>
+    SELECT 61/4 Number1,
+           TO_NUMBER(NULL) Number2,
+           10 Number3,
+           'test"ch;aine' Chaine
+    FROM DUAL
+  </qryStatement>
+  <decimalSeparator>v</decimalSeparator>
+  <quotedStringCar>"</quotedStringCar>
+</querySelectType>

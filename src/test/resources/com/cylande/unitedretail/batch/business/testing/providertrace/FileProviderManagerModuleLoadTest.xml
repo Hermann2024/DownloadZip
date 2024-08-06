@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <BATCH_RUN 
+      SITE_CODE ="LOCAL" BATCH_CODE ="BATCH"
+			ID ="1" />
+	<TASK_RUN
+			SITE_CODE ="LOCAL" TASK_CODE ="B0.T1"
+      PARENT_ID="1" ID ="123456" />
+  <TASK_RUN
+			SITE_CODE ="LOCAL" TASK_CODE ="B1.T1"
+      PARENT_ID="1" ID ="123456" />
+  <TASK_RUN
+			SITE_CODE ="LOCAL" TASK_CODE ="B1.T2"
+      PARENT_ID="1" ID ="123456" />
+  <FILE_PROVIDER_TRACE
+			ID ="1" TASK_ID ="123456"
+			TASK_CODE ="B0.T1" SITE_CODE ="LOCAL"
+			DOMAIN ="default" PROVIDER_NAME ="ProviderTest BO.T1"
+			FILE_PATH ="chemin/vers/fichier"/>
+</dataset>
+

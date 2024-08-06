@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<querySelectType>
+  <qryStatement>
+    SELECT p.Code, p.Creation_Time, p.Modification_Time, p.Modification_User_Code, p.External_Reference,
+    i.Code ItemCode, i.Collection_Code, i.Collection_Element_Code, i.Color_Code, i.Size_Id, i.Variant_Id, i.State_Code,
+    ipp.*, p2.*, p3.*, p4.*, p5.*
+    FROM Product p
+    RIGHT JOIN Item i ON i.Product_Id = p.ID
+    RIGHT JOIN Item_PurChase_Price ipp ON ipp.Item_Id = i.Id
+    RIGHT JOIN Product p2 ON p2.id = p.Id
+    RIGHT JOIN Product p3 ON p3.id = p.Id
+    RIGHT JOIN Product p4 ON p4.id = p.Id
+    RIGHT JOIN Product p5 ON p5.id = p.Id
+    WHERE p.Code = 'PUR001'
+  </qryStatement>
+</querySelectType>

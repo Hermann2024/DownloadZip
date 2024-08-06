@@ -1,0 +1,6 @@
+separator:,
+header:false
+fieldPrefix:"
+fieldSuffix:"
+0,dataFormatListType
+1,values,id,address

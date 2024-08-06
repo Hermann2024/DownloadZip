@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="FileProviderTrace"
+   DBObjectType="table"
+   DBObjectName="FILE_PROVIDER_TRACE"
+   AliasName="FileProviderTrace"
+   BindingStyle="JDBC"
+   UseGlueCode="false"
+   RowClass="com.cylande.unitedretail.batch.business.entity.FileProviderTraceImpl"
+   DefClass="com.cylande.unitedretail.framework.business.jbo.server.EntityDefImpl"
+   CollClass="com.cylande.unitedretail.framework.business.jbo.server.EntityCache" >
+   <Properties>
+      <Property Name ="IDX_1" Value ="TASK_ID" />
+   </Properties>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+      <Attr Name="_codeGenFlag2" Value="Access" />
+   </DesignTime>
+   <Attribute
+      Name="ID"
+      IsUpdateable="while_insert"
+      IsUnique="true"
+      IsNotNull="true"
+      ColumnName="ID"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Integer"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="FILE_PROVIDER_TRACE"
+      PrimaryKey="true" >
+   </Attribute>
+   <Attribute
+      Name="TaskId"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      ColumnName="TASK_ID"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Integer"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="FILE_PROVIDER_TRACE" >
+   </Attribute>
+   <Attribute
+      Name="TaskCode"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      Precision="256"
+      ColumnName="TASK_CODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="FILE_PROVIDER_TRACE" >
+   </Attribute>
+   <Attribute
+      Name="SiteCode"
+      Precision="16"
+      ColumnName="SITE_CODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="FILE_PROVIDER_TRACE" >
+   </Attribute>
+   <Attribute
+      Name="Domain"
+      Precision="64"
+      ColumnName="DOMAIN"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="FILE_PROVIDER_TRACE" >
+   </Attribute>
+   <Attribute
+      Name="ProviderName"
+      Precision="256"
+      ColumnName="PROVIDER_NAME"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="FILE_PROVIDER_TRACE" >
+   </Attribute>
+   <Attribute
+      Name="FilePath"
+      Precision="256"
+      ColumnName="FILE_PATH"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="FILE_PROVIDER_TRACE" >
+   </Attribute>
+   <Attribute
+      Name="FileName"
+      Precision="255"
+      ColumnName="FILE_NAME"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="FILE_PROVIDER_TRACE" >
+   </Attribute>
+   <Attribute
+      Name="InError"
+      ColumnName="IN_ERROR"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Booleans"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="FILE_PROVIDER_TRACE" >
+   </Attribute>
+   <AccessorAttribute
+      Name="TaskRun"
+      Association="com.cylande.unitedretail.batch.business.entity.association.FileProviderTraceOfTaskRun"
+      AssociationEnd="com.cylande.unitedretail.batch.business.entity.association.FileProviderTraceOfTaskRun.TaskRun"
+      AssociationOtherEnd="com.cylande.unitedretail.batch.business.entity.association.FileProviderTraceOfTaskRun.FileProviderTrace"
+      Type="com.cylande.unitedretail.batch.business.entity.TaskRunImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="FileprovidertraceIdCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.FileProviderTrace.ID" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_DBObjectName" Value="FILEPROVIDERTRACE_ID_CHECK" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FileprovidertracePrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.FileProviderTrace.ID" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_isPrimary" Value="true" />
+         <Attr Name="_DBObjectName" Value="FILEPROVIDERTRACE_PRIMARY_KEY" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FileprovidertraceTaskCodeCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.FileProviderTrace.TaskCode" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;TASK_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_DBObjectName" Value="FILEPROVIDERTRACE_TASK_CODE_CH" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="FileprovidertraceTaskIdCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.FileProviderTrace.TaskId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;TASK_ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_DBObjectName" Value="FILEPROVIDERTRACE_TASK_ID_CHEC" />
+      </DesignTime>
+   </Key>
+</Entity>

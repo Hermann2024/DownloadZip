@@ -1,0 +1,20 @@
+	<batch name="TrtBatchRun">
+		<sequence>
+			<task ref="TrtBatchRun"/>
+		</sequence>
+	</batch>
+  <batch name="ExtQuerySelect">
+    <sequence>
+      <task ref="ExtQuerySelect"/>
+    </sequence>
+  </batch>
+  <batch name="ExtQuerySelectHttp">
+  <sequence>
+    <task ref="ExtQuerySelectHttp"/>
+  </sequence>
+  </batch>
+  <batch name="ExtQueryAnalyzeCost">
+    <sequence>
+      <task ref="ExtQueryAnalyzeCost"/>
+    </sequence>
+  </batch>  

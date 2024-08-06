@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<batchListType>
+		<values name="monBatch" type="STATELESS">
+		<sequence>
+			<batch ref="B1" />
+			<task ref="T1" />
+			<batch ref="B2" />
+			<task ref="T2" />
+		</sequence>
+	</values>
+</batchListType>

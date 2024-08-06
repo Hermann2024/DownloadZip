@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<providerListType xsi:schemaLocation="http://com/cylande/unitedretail/batch Provider.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<values name="InputCriteriaList" xsi:type="FILEPROVIDER">
+		<description>Critères de recherche pour l'extration</description>
+		<file dir="d:\Temp" include="InputCriteriaList.xml" />
+	</values>
+</providerListType>

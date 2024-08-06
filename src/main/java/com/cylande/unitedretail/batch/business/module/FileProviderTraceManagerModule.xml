@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="FileProviderTraceManagerModule"
+   ComponentClass="com.cylande.unitedretail.batch.business.module.FileProviderTraceManagerModuleImpl"
+   DefClass="com.cylande.unitedretail.framework.business.jbo.server.ApplicationModuleDefImpl"
+   ComponentInterface="com.cylande.unitedretail.batch.business.module.common.FileProviderTraceManagerModule"
+   ClientProxyName="com.cylande.unitedretail.batch.business.module.client.FileProviderTraceManagerModuleClient" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="FileProviderTraceView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.FileProviderTraceView" >
+   </ViewUsage>
+</AppModule>

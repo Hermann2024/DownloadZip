@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="link"
+   SeparateXMLFiles="true"
+   PackageName="com.cylande.unitedretail.batch.business.query.link" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+   </DesignTime>
+   <Containee
+      Name="BatchRunsOfBatchRunLink"
+      FullName="com.cylande.unitedretail.batch.business.query.link.BatchRunsOfBatchRunLink"
+      ObjectType="ViewLink" >
+   </Containee>
+   <Containee
+      Name="FileProviderTraceOfTaskRunLink"
+      FullName="com.cylande.unitedretail.batch.business.query.link.FileProviderTraceOfTaskRunLink"
+      ObjectType="ViewLink" >
+   </Containee>
+   <Containee
+      Name="TaskAuditsOfTaskRunLink"
+      FullName="com.cylande.unitedretail.batch.business.query.link.TaskAuditsOfTaskRunLink"
+      ObjectType="ViewLink" >
+   </Containee>
+   <Containee
+      Name="TaskRunsOfBatchRunLink"
+      FullName="com.cylande.unitedretail.batch.business.query.link.TaskRunsOfBatchRunLink"
+      ObjectType="ViewLink" >
+   </Containee>
+</JboPackage>

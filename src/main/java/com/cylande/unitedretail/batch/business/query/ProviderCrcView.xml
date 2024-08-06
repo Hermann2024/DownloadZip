@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+
+<ViewObject
+   Name="ProviderCrcView"
+   SelectList="ProviderCrc.CRC, 
+       ProviderCrc.BATCH_NAME, 
+       ProviderCrc.OVERRIDDEN, 
+       ProviderCrc.CREATION_TIME, 
+       ProviderCrc.CREATION_USER_CODE, 
+       ProviderCrc.MODIFICATION_TIME, 
+       ProviderCrc.MODIFICATION_USER_CODE"
+   FromList="PROVIDER_CRC ProviderCrc"
+   BindingStyle="JDBC"
+   CustomQuery="false"
+   RowClass="com.cylande.unitedretail.batch.business.query.ProviderCrcViewRowImpl"
+   ComponentClass="com.cylande.unitedretail.batch.business.query.ProviderCrcViewImpl"
+   DefClass="com.cylande.unitedretail.framework.business.jbo.server.ViewDefImpl"
+   RowInterface="com.cylande.unitedretail.batch.business.query.common.ProviderCrcViewRow"
+   ClientRowProxyName="com.cylande.unitedretail.batch.business.query.client.ProviderCrcViewRowClient"
+   FetchMode="FETCH_AS_NEEDED"
+   UseGlueCode="false" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess" />
+   </DesignTime>
+   <EntityUsage
+      Name="ProviderCrc"
+      Entity="com.cylande.unitedretail.batch.business.entity.ProviderCrc" >
+      <DesignTime>
+         <Attr Name="_queryClause" Value="false" />
+      </DesignTime>
+   </EntityUsage>
+   <ViewAttribute
+      Name="Crc"
+      IsUpdateable="while_insert"
+      IsUnique="true"
+      IsNotNull="true"
+      EntityAttrName="Crc"
+      EntityUsage="ProviderCrc"
+      AliasName="CRC" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="BatchName"
+      EntityAttrName="BatchName"
+      EntityUsage="ProviderCrc"
+      AliasName="BATCH_NAME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="Overridden"
+      EntityAttrName="Overridden"
+      EntityUsage="ProviderCrc"
+      AliasName="OVERRIDDEN" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationTime"
+      IsUpdateable="false"
+      EntityAttrName="CreationTime"
+      EntityUsage="ProviderCrc"
+      AliasName="CREATION_TIME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="CreationUserCode"
+      IsUpdateable="false"
+      EntityAttrName="CreationUserCode"
+      EntityUsage="ProviderCrc"
+      AliasName="CREATION_USER_CODE" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ModificationTime"
+      EntityAttrName="ModificationTime"
+      EntityUsage="ProviderCrc"
+      AliasName="MODIFICATION_TIME" >
+   </ViewAttribute>
+   <ViewAttribute
+      Name="ModificationUserCode"
+      IsUpdateable="false"
+      EntityAttrName="ModificationUserCode"
+      EntityUsage="ProviderCrc"
+      AliasName="MODIFICATION_USER_CODE" >
+   </ViewAttribute>
+</ViewObject>

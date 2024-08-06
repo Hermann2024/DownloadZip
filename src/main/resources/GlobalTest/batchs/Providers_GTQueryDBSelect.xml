@@ -1,0 +1,21 @@
+<!-- querySelect -->
+<provider name="GTQueryDBSelectQuerySelect" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/In" fileName="GTQueryDBSelect_QuerySelect${PROVIDER_IDX}.xml" scenarioFile="GTQueryDBSelect_QuerySelectScenario${PROVIDER_IDX}.xml"/>
+</provider>
+<provider name="GTQueryDBSelectQuerySelectResult" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/Out" fileName="${DATE}_QueryDBSelect_GTQuerySelect${PROVIDER_IDX}.xml"/>
+</provider>
+<provider name="GTQueryDBSelectQuerySelectReject" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/KO" fileName="${DATE}_GTQueryDBSelect_QuerySelect${PROVIDER_IDX}.xml"/>
+</provider>
+
+<!-- analyseCostQuery -->
+<provider name="GTQueryDBSelectAnalyzeCostQuery" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/In" fileName="GTQueryDBSelect_AnalyzeCostQuery${PROVIDER_IDX}.xml" scenarioFile="GTQueryDBSelect_AnalyzeCostQueryScenario${PROVIDER_IDX}.xml"/>
+</provider>
+<provider name="GTQueryDBSelectAnalyzeCostQueryResult" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/Out" fileName="${DATE}_QueryDBSelect_GTAnalyzeCostQuery${PROVIDER_IDX}.xml"/>
+</provider>
+<provider name="GTQueryDBSelectAnalyzeCostQueryReject" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/KO" fileName="${DATE}_GTQueryDBSelect_AnalyzeCostQuery${PROVIDER_IDX}.xml"/>
+</provider>

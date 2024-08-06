@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+
+<Association
+   Name="FileProviderTraceOfTaskRun" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+   </DesignTime>
+   <AssociationEnd
+      Name="TaskRun"
+      Cardinality="1"
+      Source="true"
+      Owner="com.cylande.unitedretail.batch.business.entity.TaskRun"
+      LockTopContainer="false" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.TaskRun.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_finderName" Value="TaskRun" />
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+      </DesignTime>
+   </AssociationEnd>
+   <AssociationEnd
+      Name="FileProviderTrace"
+      Cardinality="-1"
+      Owner="com.cylande.unitedretail.batch.business.entity.FileProviderTrace"
+      HasOwner="true" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.FileProviderTrace.TaskId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_finderName" Value="FileProviderTrace" />
+         <Attr Name="_aggregation" Value="0" />
+         <Attr Name="_isUpdateable" Value="true" />
+      </DesignTime>
+   </AssociationEnd>
+</Association>

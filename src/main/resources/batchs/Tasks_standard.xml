@@ -1,0 +1,30 @@
+	<task name="TrtBatchRun" xsi:type="EXTRACTION">
+		<processor ref="TrtBatchRun"/>
+		<maxFetchSize>0</maxFetchSize>
+	</task>
+  <task name="ExtQuerySelect" xsi:type="EXTRACTION">
+    <processor ref="ExtQuerySelect"/>
+    <input>
+      <provider ref="ExtQuerySelect"/>
+    </input>
+    <response>
+      <provider ref="ExtQuerySelectResult"/>
+    </response>
+    <maxFetchSize>100</maxFetchSize>
+  </task>
+  <task name="ExtQuerySelectHttp" xsi:type="EXTRACTION">
+  <processor ref="ExtQuerySelectHttp"/>
+  <response>
+    <provider ref="ExtQuerySelectResultHttp"/>
+  </response>
+  <maxFetchSize>100</maxFetchSize>
+  </task>
+  <task name="ExtQueryAnalyzeCost" xsi:type="EXTRACTION">
+    <processor ref="ExtQueryAnalyzeCost"/>
+    <input>
+      <provider ref="ExtQueryAnalyzeCost"/>
+    </input>
+    <response>
+      <provider ref="ExtQueryAnalyzeCostResult"/>
+    </response>
+  </task>

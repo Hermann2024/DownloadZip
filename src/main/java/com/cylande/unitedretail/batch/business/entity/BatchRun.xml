@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+
+<Entity
+   Name="BatchRun"
+   DBObjectType="table"
+   DBObjectName="BATCH_RUN"
+   AliasName="BatchRun"
+   BindingStyle="JDBC"
+   UseGlueCode="false"
+   RowClass="com.cylande.unitedretail.batch.business.entity.BatchRunImpl"
+   DefClass="com.cylande.unitedretail.framework.business.jbo.server.EntityDefImpl"
+   CollClass="com.cylande.unitedretail.framework.business.jbo.server.EntityCache" >
+   <Properties>
+      <Property Name ="IDX_1" Value ="PARENT_ID" />
+      <Property Name ="IDX_2" Value ="BATCH_CODE, STATE, SITE_CODE" />
+   </Properties>
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <AttrArray Name="_publishEvents">
+      </AttrArray>
+      <Attr Name="_codeGenFlag2" Value="Access" />
+   </DesignTime>
+   <Attribute
+      Name="CreationTime"
+      IsUpdateable="while_insert"
+      ColumnName="CREATION_TIME"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Timestamp"
+      ColumnType="TIMESTAMP"
+      SQLType="VARCHAR"
+      TableName="BATCH_RUN"
+      HistoryColumn="DateHistory" >
+   </Attribute>
+   <Attribute
+      Name="CreationUserCode"
+      IsUpdateable="while_insert"
+      Precision="16"
+      ColumnName="CREATION_USER_CODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="BATCH_RUN"
+      HistoryColumn="UserHistory" >
+   </Attribute>
+   <Attribute
+      Name="ModificationTime"
+      ColumnName="MODIFICATION_TIME"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Timestamp"
+      ColumnType="TIMESTAMP"
+      SQLType="VARCHAR"
+      TableName="BATCH_RUN"
+      HistoryColumn="DateHistory" >
+   </Attribute>
+   <Attribute
+      Name="ModificationUserCode"
+      Precision="16"
+      ColumnName="MODIFICATION_USER_CODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="BATCH_RUN"
+      HistoryColumn="UserHistory" >
+   </Attribute>
+   <Attribute
+      Name="SiteCode"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      Precision="16"
+      ColumnName="SITE_CODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="BATCH_RUN" >
+   </Attribute>
+   <Attribute
+      Name="Path"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      Precision="256"
+      ColumnName="BATCH_CODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="BATCH_RUN" >
+   </Attribute>
+   <Attribute
+      Name="Id"
+      IsUpdateable="while_insert"
+      IsNotNull="true"
+      ColumnName="ID"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Integer"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="BATCH_RUN"
+      PrimaryKey="true" >
+   </Attribute>
+   <Attribute
+      Name="ParentId"
+      ColumnName="PARENT_ID"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Integer"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="BATCH_RUN" >
+   </Attribute>
+   <Attribute
+      Name="StartTime"
+      ColumnName="START_TIME"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Timestamp"
+      ColumnType="TIMESTAMP"
+      SQLType="TIMESTAMP"
+      TableName="BATCH_RUN" >
+   </Attribute>
+   <Attribute
+      Name="EndTime"
+      ColumnName="END_TIME"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Timestamp"
+      ColumnType="TIMESTAMP"
+      SQLType="TIMESTAMP"
+      TableName="BATCH_RUN" >
+   </Attribute>
+   <Attribute
+      Name="Status"
+      ColumnName="STATE"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Booleans"
+      ColumnType="NUMBER"
+      SQLType="VARCHAR"
+      TableName="BATCH_RUN" >
+   </Attribute>
+   <Attribute
+      Name="Domain"
+      Precision="64"
+      ColumnName="DOMAIN"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="BATCH_RUN" >
+   </Attribute>
+   <Attribute
+      Name="BatchType"
+      Precision="16"
+      ColumnName="BATCH_TYPE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="BATCH_RUN" >
+   </Attribute>
+   <Attribute
+      Name="BatchMode"
+      Precision="16"
+      ColumnName="BATCH_MODE"
+      Type="java.lang.String"
+      ColumnType="VARCHAR2"
+      SQLType="VARCHAR"
+      TableName="BATCH_RUN" >
+   </Attribute>
+   <Attribute
+      Name="InError"
+      DefaultValue="0"
+      ColumnName="IN_ERROR"
+      Type="com.cylande.unitedretail.framework.business.jbo.domain.common.Booleans"
+      ColumnType="NUMBER"
+      SQLType="NUMERIC"
+      TableName="BATCH_RUN" >
+   </Attribute>
+   <AccessorAttribute
+      Name="TaskRun"
+      Association="com.cylande.unitedretail.batch.business.entity.association.TaskRunsOfBatchRun"
+      AssociationEnd="com.cylande.unitedretail.batch.business.entity.association.TaskRunsOfBatchRun.TaskRun"
+      AssociationOtherEnd="com.cylande.unitedretail.batch.business.entity.association.TaskRunsOfBatchRun.BatchRun"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="BatchRun"
+      Association="com.cylande.unitedretail.batch.business.entity.association.BatchRunsOfBatchRun"
+      AssociationEnd="com.cylande.unitedretail.batch.business.entity.association.BatchRunsOfBatchRun.BatchRun"
+      AssociationOtherEnd="com.cylande.unitedretail.batch.business.entity.association.BatchRunsOfBatchRun.ParentIdBatchRun"
+      Type="oracle.jbo.RowIterator"
+      IsUpdateable="false" >
+   </AccessorAttribute>
+   <AccessorAttribute
+      Name="BatchRunParents"
+      Association="com.cylande.unitedretail.batch.business.entity.association.ParentBatchRun"
+      AssociationEnd="com.cylande.unitedretail.batch.business.entity.association.ParentBatchRun.BatchRunParents"
+      AssociationOtherEnd="com.cylande.unitedretail.batch.business.entity.association.ParentBatchRun.ParentIdBatchRun1"
+      Type="com.cylande.unitedretail.batch.business.entity.BatchRunImpl" >
+   </AccessorAttribute>
+   <Key
+      Name="BatchRunIdCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_DBObjectName" Value="BATCH_RUN_ID_CHECK" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="BatchRunPathCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.Path" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;BATCH_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_DBObjectName" Value="BATCH_RUN_BATCH_CODE_CHECK" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="BatchRunPrimaryKey" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_isPrimary" Value="true" />
+         <Attr Name="_DBObjectName" Value="BATCH_RUN_PRIMARY_KEY" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="BatchRunSiteCodeCheck" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.SiteCode" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;SITE_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_isNotNull" Value="true" />
+         <Attr Name="_DBObjectName" Value="BATCH_RUN_SITE_CODE_CHECK" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001794589" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.Path" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;BATCH_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001794589" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001794590" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001794590" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC001794591" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.SiteCode" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;SITE_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C001794591" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002747942" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.SiteCode" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;SITE_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C002747942" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002747943" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.Path" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;BATCH_CODE&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C002747943" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="SysC002747944" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.Id" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_checkCondition" Value="&#34;ID&#34; IS NOT NULL" />
+         <Attr Name="_isCheck" Value="true" />
+         <Attr Name="_DBObjectName" Value="SYS_C002747944" />
+      </DesignTime>
+   </Key>
+   <Key
+      Name="fk_BatchRun" >
+      <AttrArray Name="Attributes">
+         <Item Value="com.cylande.unitedretail.batch.business.entity.BatchRun.ParentId" />
+      </AttrArray>
+      <DesignTime>
+         <Attr Name="_referencedKey" Value="BATCH_RUN_ID_CHECK" />
+         <Attr Name="_isForeign" Value="true" />
+         <Attr Name="_DBObjectName" Value="FK_BATCH_RUN" />
+      </DesignTime>
+   </Key>
+   <MethodValidationBean
+      xmlns="http://xmlns.oracle.com/adfm/validation"
+      MethodName="validateStartEndDate" >
+   </MethodValidationBean>
+</Entity>

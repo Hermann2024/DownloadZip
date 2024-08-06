@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="ProviderCrcManagerModule"
+   ComponentClass="com.cylande.unitedretail.batch.business.module.ProviderCrcManagerModuleImpl"
+   DefClass="com.cylande.unitedretail.framework.business.jbo.server.ApplicationModuleDefImpl"
+   ComponentInterface="com.cylande.unitedretail.batch.business.module.common.ProviderCrcManagerModule"
+   ClientProxyName="com.cylande.unitedretail.batch.business.module.client.ProviderCrcManagerModuleClient" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="ProviderCrcView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.ProviderCrcView" >
+   </ViewUsage>
+</AppModule>

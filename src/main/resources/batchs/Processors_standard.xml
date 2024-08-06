@@ -1,0 +1,96 @@
+	<processor name="TrtBatchRun">
+		<variables>
+			<variable name="input">
+				<value>
+					<batchRunCriteriaListType>
+						<list>
+							<startDate>
+								<beforeAge>86400</beforeAge>
+							</startDate>
+						</list>
+					</batchRunCriteriaListType>
+				</value>
+			</variable>
+			<variable name="response"/>
+		</variables>
+		<block>
+			<service name="TrtBatchRun" operation="deleteBatchRunList" refservice="BatchRunManagerService">
+				<params>
+					<input/>
+					<context variable="context"/>
+				</params>
+				<return variable="response"/>
+			</service>
+		</block>
+		<output return="response"/>
+	</processor>
+  <processor name="ExtQuerySelect">
+    <variables>
+      <variable name="scenario">
+        <value>
+          <querySelectScenarioType/>
+        </value>
+      </variable>
+      <variable name="response"/>
+    </variables>
+    <block>
+      <service name="ExtQuerySelect" operation="querySelect" refservice="QueryDBSelectManagerService" main="true">
+        <params>
+          <input/>
+          <scenario variable="scenario"/>
+          <context variable="context"/>
+        </params>
+        <return variable="response"/>
+      </service>
+    </block>
+    <output return="response"/>
+  </processor>
+  <processor name="ExtQuerySelectHttp">
+  <variables>
+    <variable name="input">
+      <value>
+        <querySelectType>
+          <qryStatement>${QUERYSELECT_QRYSTATEMENT}</qryStatement>
+          <dateFormat>${QUERYSELECT_DATEFORMAT}</dateFormat>
+          <decimalSeparator>${QUERYSELECT_DECIMALSEPARATOR}</decimalSeparator>
+          <quotedStringCar>${QUERYSELECT_QUOTEDSTRINGCAR}</quotedStringCar>
+        </querySelectType>
+      </value>
+    </variable>
+    <variable name="scenario">
+      <value>
+        <querySelectScenarioType>
+          <costMax>${QUERYSELECT_COSTMAX}</costMax>
+        </querySelectScenarioType>
+      </value>
+    </variable>
+    <variable name="response"/>
+  </variables>
+  <block>
+    <service name="ExtQuerySelect" operation="querySelect" refservice="QueryDBSelectManagerService" main="true">
+      <params>
+        <input variable="input"/>
+        <scenario variable="scenario"/>
+        <context variable="context"/>
+      </params>
+      <return variable="response"/>
+    </service>
+  </block>
+  <output return="response"/>
+  </processor>
+  <processor name="ExtQueryAnalyzeCost">
+    <variables>
+      <variable name="response"/>
+    </variables>
+    <block>
+      <service name="ExtQueryAnalyzeCost" operation="analyzeCostQuery" refservice="QueryDBSelectManagerService">
+        <params>
+          <input />
+          <scenario variable="scenario"/>
+          <context variable="context"/>
+        </params>
+        <return variable="response"/>
+      </service>
+    </block>
+    <output return="response"/>
+  </processor>

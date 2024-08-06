@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queryResultType>
+  <values>
+    <valueField1>NUMBER1</valueField1>
+    <valueField3>NUMBER3</valueField3>
+    <valueField4>CHAINE</valueField4>
+  </values>
+  <values>
+    <valueField1>15v25</valueField1>
+    <valueField3>10</valueField3>
+    <valueField4>"test""ch;aine"</valueField4>
+  </values>
+</queryResultType>

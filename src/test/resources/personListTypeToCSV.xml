@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personListType>
+	<values>
+		<lineType>VALUES</lineType>
+		<id>1</id>
+		<language>FR</language>
+		<linkedPersons>
+			<person>
+				<lineType>LINKED PERSON NIVEAU 1</lineType>
+				<id>11</id>
+				<linkedPersons>
+					<person>
+						<lineType>LINKED PERSON NIVEAU 2</lineType>
+						<id>111</id>
+						<linkedPersons>
+							<person>
+								<lineType>LINKED PERSON NIVEAU 3</lineType>
+								<id>1111</id>
+							</person>
+						</linkedPersons>
+					</person>
+				</linkedPersons>
+				<linkedPersons>
+					<person>
+						<lineType>LINKED PERSON NIVEAU 2</lineType>
+						<id>112</id>
+					</person>
+				</linkedPersons>
+			</person>
+		</linkedPersons>
+		<linkedPersons>
+			<person>
+				<lineType>LINKED PERSON NIVEAU 1</lineType>
+				<id>12</id>
+				<linkedPersons>
+					<person>
+						<lineType>LINKED PERSON NIVEAU 2</lineType>
+						<id>121</id>
+					</person>
+				</linkedPersons>
+				<linkedPersons>
+					<person>
+						<lineType>LINKED PERSON NIVEAU 2</lineType>
+						<id>122</id>
+						<linkedPersons>
+							<person>
+								<lineType>LINKED PERSON NIVEAU 3</lineType>
+								<id>1221</id>
+							</person>
+						</linkedPersons>
+					</person>
+				</linkedPersons>
+			</person>
+		</linkedPersons>
+	</values>
+	<values>
+		<lineType>VALUES</lineType>
+		<id>2</id>
+		<language>BE</language>
+		<linkedPersons>
+			<person>
+				<lineType>LINKED PERSON NIVEAU 1</lineType>
+				<id>21</id>
+				<linkedPersons>
+					<person>
+						<lineType>LINKED PERSON NIVEAU 2</lineType>
+						<id>211</id>
+						<linkedPersons>
+							<person>
+								<lineType>LINKED PERSON NIVEAU 3</lineType>
+								<id>2111</id>
+							</person>
+						</linkedPersons>
+					</person>
+				</linkedPersons>
+				<linkedPersons>
+					<person>
+						<lineType>LINKED PERSON NIVEAU 2</lineType>
+						<id>212</id>
+					</person>
+				</linkedPersons>
+			</person>
+		</linkedPersons>
+	</values>
+	<values>
+		<lineType>VALUES</lineType>
+		<id>3</id>
+		<language>GB</language>
+	</values>
+</personListType>

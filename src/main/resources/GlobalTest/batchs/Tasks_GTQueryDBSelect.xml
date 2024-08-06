@@ -1,0 +1,41 @@
+<!-- QuerySelect FetchSize = 5-->
+<task name="GTQueryDBSelectQuerySelectBy5" xsi:type="EXTRACTION">
+  <processor ref="GTQueryDBSelectQuerySelect"/>
+  <response>
+    <provider ref="GTQueryDBSelectQuerySelectResult"/>
+  </response>
+  <input>
+    <provider ref="GTQueryDBSelectQuerySelect"/>
+  </input>
+  <reject>
+    <provider ref="GTQueryDBSelectQuerySelectReject"/>
+  </reject>
+  <maxFetchSize>5</maxFetchSize>
+</task>
+<!-- QuerySelect FetchSize = 2-->
+<task name="GTQueryDBSelectQuerySelectBy2" xsi:type="EXTRACTION">
+  <processor ref="GTQueryDBSelectQuerySelect"/>
+  <response>
+    <provider ref="GTQueryDBSelectQuerySelectResult"/>
+  </response>
+  <input>
+    <provider ref="GTQueryDBSelectQuerySelect"/>
+  </input>
+  <reject>
+    <provider ref="GTQueryDBSelectQuerySelectReject"/>
+  </reject>
+  <maxFetchSize>2</maxFetchSize>
+</task>
+<!-- AnalyzeCostQuery-->
+<task name="GTQueryDBSelectAnalyzeCostQuery" xsi:type="EXTRACTION">
+  <processor ref="GTQueryDBSelectAnalyzeCostQuery"/>
+  <response>
+    <provider ref="GTQueryDBSelectAnalyzeCostQueryResult"/>
+  </response>
+  <input>
+    <provider ref="GTQueryDBSelectAnalyzeCostQuery"/>
+  </input>
+  <reject>
+    <provider ref="GTQueryDBSelectAnalyzeCostQueryReject"/>
+  </reject>
+</task>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="Batch" moduleUR="MDM">
+  <grouplib name="json" version="1.0"/>
+  <grouplib name="staxon" version="1.0"/>
+  <artifact artifactId="Batch" type="jar"/>
+  <artifact artifactId="Batch" type="zip" group="SQLScripts" classifier="SQL"/>
+	<artifact artifactId="Batch" type="zip" group="ErrorMessages" classifier="ErrMsg"/>
+	<artifact artifactId="Batch" type="zip" group="Batchs" classifier="Batch"/>
+  <artifact artifactId="Batch" type="zip" group="GTBatchs" classifier="GTBatch"/>
+  <artifact artifactId="Batch" type="zip" group="GTPopulates" classifier="GTPopulate"/>
+	<!-- Data sources-->
+	<resource-ref description="DBConnection" res-ref-name="jdbc/URbatchDS" res-type="javax.sql.DataSource" res-auth="Container"/>
+	<!-- Servlet-->
+	<servlet servlet-name="BatchEngineServlet" servlet-class="com.cylande.unitedretail.batch.scheduler.BatchEngineServlet" load-on-startup="0"/>
+	<servlet servlet-name="ProvidersPoolServlet" servlet-class="com.cylande.unitedretail.batch.provider.pool.RemoteProviderPoolServlet" load-on-startup="-1"/>
+	<!-- Servlet mapping-->
+	<servlet-mapping servlet-name="BatchEngineServlet" url-pattern="/batchEngine"/>
+	<servlet-mapping servlet-name="BatchEngineServlet" url-pattern="/Batchs.xml"/>
+	<servlet-mapping servlet-name="ProvidersPoolServlet" url-pattern="/providersPoolServlet"/>
+</project>

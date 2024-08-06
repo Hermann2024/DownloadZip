@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<taskListType xsi:schemaLocation="http://com/cylande/unitedretail/batch Task.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<values name="maTache" xsi:type="EXTRACTION">
+		<description>tache d'extraction</description>
+		<processor ref="processExtraction" />
+		<input>
+			<provider ref="InputCriteriaList" />
+		</input>		
+		<response>
+			<provider ref="resultatExtractionList" />
+		</response>
+		<maxFetchSize>1000</maxFetchSize>
+	</values>
+</taskListType>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queryResultType>
+  <values>
+    <valueField1>DATE1</valueField1>
+    <valueField3>DATE3</valueField3>
+  </values>
+  <values>
+    <valueField1>Le 23 juin 2021 à 10:22:35</valueField1>
+    <valueField3>Le 23 juin 2021 à 00:00:00</valueField3>
+  </values>
+</queryResultType>

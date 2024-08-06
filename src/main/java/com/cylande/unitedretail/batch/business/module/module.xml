@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE JboPackage SYSTEM "jbo_03_01.dtd">
+
+<JboPackage
+   Name="module"
+   SeparateXMLFiles="true"
+   PackageName="com.cylande.unitedretail.batch.business.module" >
+   <DesignTime>
+      <Attr Name="_ejbPackage" Value="false" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+   </DesignTime>
+   <Containee
+      Name="BatchApplicationModule"
+      FullName="com.cylande.unitedretail.batch.business.module.BatchApplicationModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="BatchRunManagerModule"
+      FullName="com.cylande.unitedretail.batch.business.module.BatchRunManagerModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="FileProviderTraceManagerModule"
+      FullName="com.cylande.unitedretail.batch.business.module.FileProviderTraceManagerModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="ProviderCrcManagerModule"
+      FullName="com.cylande.unitedretail.batch.business.module.ProviderCrcManagerModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="QueryDBSelectManagerModule"
+      FullName="com.cylande.unitedretail.batch.business.module.QueryDBSelectManagerModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="TaskAuditManagerModule"
+      FullName="com.cylande.unitedretail.batch.business.module.TaskAuditManagerModule"
+      ObjectType="AppModule" >
+   </Containee>
+   <Containee
+      Name="TaskRunManagerModule"
+      FullName="com.cylande.unitedretail.batch.business.module.TaskRunManagerModule"
+      ObjectType="AppModule" >
+   </Containee>
+</JboPackage>

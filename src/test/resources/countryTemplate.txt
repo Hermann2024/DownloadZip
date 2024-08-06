@@ -1,0 +1,4 @@
+separator:;
+header:false
+0;countryListType
+1;values;code;shortDescription;description;translations.language;translations.description;vatCodes.code;vatCodes.translations.language;translations.language;

@@ -1,0 +1,10 @@
+separator:|
+lineSeparator:\r\n
+header:false
+fieldPrefixWithoutData:(
+fieldSuffixWithoutData:)
+0|personListType|
+1|values|lineType|id|language{FR:France;BE:Belgique}|fake|fakeWithDefaultValue{:defaultValue}
+2|linkedPersons|person.lineType|person.id|
+6|linkedPersons|person.lineType|person.id|
+

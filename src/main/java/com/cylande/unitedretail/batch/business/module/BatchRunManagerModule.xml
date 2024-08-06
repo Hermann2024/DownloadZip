@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+
+<AppModule
+   Name="BatchRunManagerModule"
+   ComponentClass="com.cylande.unitedretail.batch.business.module.BatchRunManagerModuleImpl"
+   DefClass="com.cylande.unitedretail.framework.business.jbo.server.ApplicationModuleDefImpl"
+   ComponentInterface="com.cylande.unitedretail.batch.business.module.common.BatchRunManagerModule"
+   ClientProxyName="com.cylande.unitedretail.batch.business.module.client.BatchRunManagerModuleClient" >
+   <DesignTime>
+      <Attr Name="_isCodegen" Value="true" />
+      <Attr Name="_version" Value="10.1.3.41.57" />
+      <Attr Name="_deployType" Value="0" />
+   </DesignTime>
+   <ViewUsage
+      Name="BatchRunView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.BatchRunView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="BatchRunInErrorView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.BatchRunInErrorView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="TaskAuditView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.TaskAuditView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="TaskRunChildrenView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.TaskRunView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="BatchErrorsView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.BatchErrorsView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="BatchRunChildrenView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.BatchRunView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="BatchInProgressView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.BatchInProgressView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="DeleteBatchRunView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.BatchRunView" >
+   </ViewUsage>
+   <ViewUsage
+      Name="DeleteBatchRunListView"
+      ViewObjectName="com.cylande.unitedretail.batch.business.query.BatchRunView" >
+   </ViewUsage>
+   <ViewLinkUsage
+      Name="TaskRunsOfBatchRunLink1"
+      ViewLinkObjectName="com.cylande.unitedretail.batch.business.query.link.TaskRunsOfBatchRunLink"
+      SrcViewUsageName="com.cylande.unitedretail.batch.business.module.BatchRunManagerModule.BatchRunView"
+      DstViewUsageName="com.cylande.unitedretail.batch.business.module.BatchRunManagerModule.TaskRunChildrenView" >
+      <DesignTime>
+         <Attr Name="_isCodegen" Value="true" />
+         <Attr Name="_version" Value="10.1.3.41.57" />
+      </DesignTime>
+   </ViewLinkUsage>
+   <ViewLinkUsage
+      Name="BatchRunsOfBatchRunLink1"
+      ViewLinkObjectName="com.cylande.unitedretail.batch.business.query.link.BatchRunsOfBatchRunLink"
+      SrcViewUsageName="com.cylande.unitedretail.batch.business.module.BatchRunManagerModule.BatchRunView"
+      DstViewUsageName="com.cylande.unitedretail.batch.business.module.BatchRunManagerModule.BatchRunChildrenView" >
+      <DesignTime>
+         <Attr Name="_isCodegen" Value="true" />
+         <Attr Name="_version" Value="10.1.3.41.57" />
+      </DesignTime>
+   </ViewLinkUsage>
+</AppModule>

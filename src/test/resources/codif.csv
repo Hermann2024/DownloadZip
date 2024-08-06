@@ -1,0 +1,10 @@
+codeEqualsExclude;descEqualsExclude
+codeStartsWithExclude;descExclude
+codeExclude;descEndsWithExclude
+codeContainsExclude;descExclude
+codeEqualsCASEINSExclude;descEqualsExclude
+codeStartsWithCASEINSExclude;descExclude
+codeExclude;descEndsWithCASEINSExclude
+codeContainsCASEINSExclude;descExclude
+(co&amp;de1);(desc1)
+(code2;desc2)

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+ <!-- Standards patterns -->
+ <!--                    -->
+ <!-- %m: Outputs your message. -->
+ <!-- %p: Outputs the priority of the logging event (Priority : DEBUG, INFO, WARN, ERROR, FATAL) -->
+ <!-- %r: Outputs the number of milliseconds elapsed since the start of the application until the creation of the logging event. -->
+ <!-- %c: Outputs the category of the logging event. Example: For the category name "a.b.c", the pattern %c{2} will output "b.c". {2} means "output last two components of the dot-separated category name". If no {n} is there, full Category name is output by default. -->
+ <!-- %t: Outputs the name of the thread that generated the logging event. -->
+ <!-- %x: Outputs the nested diagnostic context (NDC) associated with the thread that generated the logging event. Useful when multiple clients are handled by separate threads such as in Java servlets. -->
+ <!-- %n: Outputs the platform-dependent newline character(s). Preferable to specifying "\n" or "\r\n" etc. -->
+ <!-- %%: Outputs a single percent sign. -->
+ <!-- WARNING: The patterns below will slow down the execution of your program somewhat. Avoid unless execution speed is not an issue. -->
+ <!-- %d: Outputs the date of the logging event. The date conversion specifier may be followed by a date format specifier enclosed between braces. Example: %d{HH:mm:ss,SSS} or %d{dd MMM yyyy HH:mm:ss,SSS}. If no date format specifier is given then ISO8601 format is assumed. The date format specifier admits the same syntax as the time pattern string of Java's SimpleDateFormat which is slow. For faster performance, use %d{ISO8601}, %d{ABSOLUTE}, %d{RELATIVE} (millisecs since program start, fastest) or %d{DATE} which use log4j's ISO8601DateFormat, AbsoluteTimeDateFormat, RelativeTimeDateFormat and DateTimeDateFormat date formatters respectively. -->
+ <!-- %l: Outputs source code location information. Shortcut for %C.%M(%F:%L). -->
+ <!-- %C: Outputs the fully-qualified class name of the caller issuing the logging request. Example: For the class name "org.apache.xyz.SomeClass", the pattern %C{1} will output "SomeClass". {1} means "output last one component of the fully-qualified class name". If no {n} is there, full class name is output by default. -->
+ <!-- %M: Outputs the method name where the logging request was issued. -->
+ <!-- %F: Outputs the file name where the logging request was issued. -->
+ <!-- %L: Outputs the line number from where the logging request was issued. -->
+
+ <!-- MDC entries                    -->
+ <!--                                -->
+ <!-- Timers related informations :  -->
+ <!--  * CLASS_NAME                  -->
+ <!--  * METHOD_NAME                 -->
+ <!--  * INSTANCE_NAME               -->
+ <!--  * COMPONENT_NAME              -->
+ <!--  * SQL_STATEMENT               -->
+ <!--  * ENTITY_OBJECT_TIMER         -->
+ <!--  * VIEW_OBJECT_TIMER           -->
+ <!--  * COMPONENT_TIMER             -->
+ <!--  * SERVICE_TIMER               -->
+ <!-- Request related informations : -->
+ <!--  * HTTP_SESSION_ID             -->
+ <!--  * REQUEST_URI                 -->
+ <!--  * REMOTE_ADDR                 -->
+ <!--  * REMOTE_HOST                 -->
+ <!--  * SERVER_HOST_ADDRESS         -->
+ <!--  * SERVER_HOST_NAME            -->
+ <!--  * LOCALE                      -->
+
+ 
+	<appender name="LF5Appender" class="org.apache.log4j.lf5.LF5Appender">
+		<param name="MaxNumberOfRecords" value="1000"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[slf5s.start]%d[slf5s.DATE] %-5p[slf5s.PRIORITY] %t[slf5s.THREAD]  %m[slf5s.MESSAGE]%n"/>
+		</layout>
+	</appender>
+
+	<appender name="APP_FILE" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="target/log/UnitedRetail.log"/>
+		<param name="MaxFileSize" value="100MB"/>
+		<param name="MaxBackupIndex" value="5"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d¤%t¤%p¤%l¤%m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="APP_TIMER" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="target/log/timer.log"/>
+		<param name="MaxFileSize" value="100MB"/>
+		<param name="MaxBackupIndex" value="5"/>
+		<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%d¤%c¤%t¤%X{REMOTE_HOST}¤%X{REMOTE_ADDR}¤%X{SERVER_HOST_NAME}¤%X{SERVER_HOST_ADDRESS}¤%X{LOCALE}¤%X{REQUEST_URI}¤%X{HTTP_SESSION_ID}¤%X{CLASS_NAME}¤%X{METHOD_NAME}¤%X{INSTANCE_NAME}¤%X{SQL_STATEMENT}¤%m%n"/>
+		</layout>
+	</appender>
+
+	<!-- Appender spécifique au service QueryDBSelect -->
+	<appender name="QUERY_DB_SELECT" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="log/UnitedRetail_QueryDbSelect.log"/>
+		<param name="MaxFileSize" value="100MB"/>
+		<param name="MaxBackupIndex" value="5"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d¤%t¤%p¤%l¤%m%n"/>
+		</layout>
+	</appender>
+
+	<!-- Timers for SQL DML operations (insert, update, delete) -->
+	<logger name="ENTITY_OBJECT_TIMER" additivity="false">
+		<level value="off"/>
+		<appender-ref ref="APP_TIMER"/>
+	</logger>
+
+	<!-- Timers for SQL Query operations (select) -->
+	<logger name="VIEW_OBJECT_TIMER" additivity="false">
+		<level value="off"/>
+		<appender-ref ref="APP_TIMER"/>
+	</logger>
+
+	<!-- Timers for components (used by business data oriented services) -->
+	<logger name="COMPONENT_TIMER" additivity="false">
+		<level value="info"/>
+		<appender-ref ref="APP_TIMER"/>
+	</logger>
+
+	<!-- Timers for service's operations -->
+	<logger name="SERVICE_TIMER" additivity="false">
+		<level value="info"/>
+		<appender-ref ref="APP_TIMER"/>
+	</logger>
+
+	<!-- Timers for service's QueryDbSelect -->
+	<logger name="SERVICE_QUERY_DB_SELECT" additivity="false">
+		<level value="error"/>
+		<appender-ref ref="QUERY_DB_SELECT"/>
+	</logger>
+
+	<!-- Used to dump IN/OUT service's data into xml files -->
+	<logger name="SERVICE_DUMP" additivity="false">
+		<level value="off"/>
+	</logger>
+
+	<!-- Default when logger is not specified -->
+	<root>
+		<level value="warn"/>
+		<appender-ref ref="APP_FILE"/>
+	</root>
+</log4j:configuration>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<countryListType>
+	<values>
+		<code>CN</code>
+		<description>Chine</description>
+		<shortDescription>CHINE</shortDescription>
+		<translations>
+			<language>DE</language>
+		</translations>
+		<translations>
+			<language>EN</language>
+		</translations>
+		<translations>
+			<language>FR</language>
+			<description>Chine</description>
+			<shortDescription>CHINE</shortDescription>
+		</translations>
+		<translations>
+			<language>IT</language>
+		</translations>
+		<translations>
+			<language>JP</language>
+		</translations>
+		<currency>CNY</currency>
+		<isoCode>CN</isoCode>
+		<localizationCode>CN</localizationCode>
+	</values>
+	<values>
+		<code>JP</code>
+		<description>Japon</description>
+		<shortDescription>JAPON</shortDescription>
+		<translations>
+			<language>EN</language>
+		</translations>
+		<translations>
+			<language>FR</language>
+			<description>Japon</description>
+			<shortDescription>JAPON</shortDescription>
+		</translations>
+		<translations>
+			<language>IT</language>
+		</translations>
+		<translations>
+			<language>JP</language>
+		</translations>
+		<currency>JPY</currency>
+		<isoCode>JP</isoCode>
+		<taxPositions>
+			<code>JP</code>
+			<detailCode>S</detailCode>
+			<description>Standard JP</description>
+			<shortDescription>Standard Japonais</shortDescription>
+			<translations>
+				<language>DE</language>
+			</translations>
+			<translations>
+				<language>EN</language>
+			</translations>
+			<translations>
+				<language>FR</language>
+				<description>Standard JP</description>
+				<shortDescription>Standard Japonais</shortDescription>
+			</translations>
+			<translations>
+				<language>IT</language>
+			</translations>
+			<translations>
+				<language>JP</language>
+			</translations>
+		</taxPositions>
+		<vatCodes>
+			<code>JP</code>
+			<detailCode>2</detailCode>
+			<description>Réduit JP</description>
+			<shortDescription>2-Réduit JP</shortDescription>
+			<translations>
+				<language>DE</language>
+			</translations>
+			<translations>
+				<language>EN</language>
+			</translations>
+			<translations>
+				<language>FR</language>
+				<description>Réduit JP</description>
+				<shortDescription>2-Réduit JP</shortDescription>
+			</translations>
+			<translations>
+				<language>IT</language>
+			</translations>
+			<translations>
+				<language>JP</language>
+			</translations>
+		</vatCodes>
+		<vatCodes>
+			<code>JP</code>
+			<detailCode>3</detailCode>
+			<description>Standard JP</description>
+			<shortDescription>3-Standard JP</shortDescription>
+			<translations>
+				<language>DE</language>
+			</translations>
+			<translations>
+				<language>EN</language>
+			</translations>
+			<translations>
+				<language>FR</language>
+				<description>Standard JP</description>
+				<shortDescription>3-Standard JP</shortDescription>
+			</translations>
+			<translations>
+				<language>IT</language>
+			</translations>
+			<translations>
+				<language>JP</language>
+			</translations>
+		</vatCodes>
+		<vatRates>
+			<country>JP</country>
+			<taxPosition>S</taxPosition>
+			<vatCode>2</vatCode>
+			<id>1</id>
+			<startDate>2019-07-20</startDate>
+			<rate>6.0</rate>
+		</vatRates>
+		<vatRates>
+			<country>JP</country>
+			<taxPosition>S</taxPosition>
+			<vatCode>3</vatCode>
+			<id>1</id>
+			<startDate>2019-07-20</startDate>
+			<rate>18.0</rate>
+		</vatRates>
+		<localizationCode>JP</localizationCode>
+		<translations>
+			<language>DE</language>
+		</translations>
+	</values>
+</countryListType>

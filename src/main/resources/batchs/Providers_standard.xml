@@ -1,0 +1,17 @@
+<provider name="ExtQuerySelect" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/In" fileName="*_QuerySelect.xml"/>
+</provider>
+<provider name="ExtQuerySelectResult" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/Out" fileName="${DATE}_${SYSTEM_inputFileNameNoExt}.csv"/>
+  <mapper ref="QuerySelectMapper"/>
+</provider>
+<provider name="ExtQuerySelectResultHttp" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/Out" fileName="${DATE}_ExtQuerySelectHttp.csv"/>
+  <mapper ref="QuerySelectMapper"/>
+</provider>
+<provider name="ExtQueryAnalyzeCost" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/In" fileName="*_QueryAnalyzeCost.xml"/>
+</provider>
+<provider name="ExtQueryAnalyzeCostResult" xsi:type="FILEPROVIDER">
+  <file dir="${REPOSITORY}/Out" fileName="${DATE}_${SYSTEM_inputFileName}"/>
+</provider>

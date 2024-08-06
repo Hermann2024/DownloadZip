@@ -1,0 +1,6 @@
+separator:;
+header:false
+fieldPrefix:(
+fieldSuffix:)
+0;codificationFreeDataListType
+1;values;detailCode;shortDescription

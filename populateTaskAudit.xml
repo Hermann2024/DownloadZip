@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<taskAuditListType>
+	<values>	  
+		<path>B0.T1</path>
+		<task>254</task>
+    <eventTime>2008-04-01T16:00:00.0</eventTime>
+    <errorCode>10</errorCode>
+    <errorMessage>Une Erreur a eu lieu</errorMessage>
+	</values>
+</taskAuditListType>

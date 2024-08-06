@@ -1,0 +1,491 @@
+<!ENTITY % Boolean  '(true|false) "false"' >
+<!ENTITY % Boolean2 '(true|false) "true"' >
+<!ENTITY % UpdateableFlag  '(true|false|while_insert) "true"' >
+<!ENTITY % AttrLoadEnum '(Each|Bulk|Skip) "Each"' >
+<!ENTITY % PageIterModeType '(Full|Partial) "Full"' >
+<!ENTITY % HistoryKind  '(NonHistory|UserHistory|DateHistory|VersionHistory) "NonHistory"' >
+<!ENTITY % VOPassivationEnum '(NoTransient|All|None) "NoTransient"' >
+
+<!ELEMENT AttrArray (Item*) >
+<!ATTLIST AttrArray Name CDATA #REQUIRED>
+
+<!ELEMENT Attr EMPTY>
+<!ATTLIST Attr
+          Name     CDATA #REQUIRED
+          Value    CDATA #REQUIRED>
+
+<!ELEMENT Item EMPTY>
+<!ATTLIST Item Value CDATA #REQUIRED>
+
+<!ELEMENT SQLQuery ANY>
+
+<!ELEMENT StringItem EMPTY>
+<!ATTLIST StringItem Value CDATA #REQUIRED>
+
+<!ELEMENT DesignTimeStringArray (StringItem+)>
+<!ATTLIST DesignTimeStringArray Name CDATA #REQUIRED>
+
+<!ELEMENT DesignTime (Attr | AttrArray)* >
+
+<!ELEMENT ComponentInterfaceBase (Item)* >
+<!ELEMENT RowInterfaceBase (Item)* >
+
+<!ELEMENT Properties (Property+) >
+<!ELEMENT Property EMPTY>
+<!ATTLIST Property
+          Name     CDATA #REQUIRED
+          Value    CDATA #REQUIRED>
+
+<!ELEMENT Data (DataItem+) >
+<!ELEMENT DataItem EMPTY>
+<!ATTLIST DataItem
+          Name     CDATA #REQUIRED
+          Value    CDATA #REQUIRED>
+
+<!ELEMENT Substitutes (Substitute+) >
+<!ELEMENT Substitute EMPTY>
+<!ATTLIST Substitute
+          OldName     CDATA #REQUIRED
+          NewName     CDATA #REQUIRED>
+
+
+<!ELEMENT NamedData  ANY>
+<!ATTLIST NamedData
+          NDName  CDATA #REQUIRED
+          NDType  CDATA #IMPLIED
+          NDValue CDATA #IMPLIED>
+
+<!ELEMENT MethodValidationBean ANY>
+<!ATTLIST MethodValidationBean
+          ResId      CDATA #IMPLIED
+          Exposed     %Boolean;
+          MethodName  CDATA #REQUIRED
+          OnAttribute CDATA #IMPLIED>
+
+<!ELEMENT RangeValidationBean ANY>
+<!ATTLIST RangeValidationBean
+          ResId      CDATA #IMPLIED
+          Exposed     %Boolean;
+          OnAttribute CDATA #IMPLIED
+          OperandType CDATA #REQUIRED
+          Inverse     %Boolean;
+          MinValue    CDATA #REQUIRED
+          MaxValue    CDATA #REQUIRED>
+
+<!ELEMENT UniquePKValidationBean ANY>
+<!ELEMENT CompareValidationBean ANY>
+<!ATTLIST CompareValidationBean
+          ResId       CDATA #IMPLIED
+          Exposed      %Boolean;
+          OnAttribute  CDATA #IMPLIED
+          OperandType  CDATA #REQUIRED
+          Inverse      %Boolean;
+          CompareType  CDATA #REQUIRED
+          CompareValue CDATA #REQUIRED>
+
+<!ELEMENT ListValidationBean (AttrArray?)>
+<!ATTLIST ListValidationBean
+          ResId       CDATA #IMPLIED
+          Exposed      %Boolean;
+          OnAttribute  CDATA #IMPLIED
+          OperandType  CDATA #REQUIRED
+          Inverse      %Boolean;
+          ListValue    CDATA #IMPLIED>
+
+<!ELEMENT RegisteredRule ANY>
+<!ATTLIST RegisteredRule
+          Name       CDATA #REQUIRED
+          BeanClass  CDATA #REQUIRED>
+
+
+<!ELEMENT ValidationBean (DesignTime?, NamedData*) >
+<!ATTLIST ValidationBean
+          Res_Id       CDATA #IMPLIED
+          Exposed      %Boolean;
+          OnAttribute  CDATA #IMPLIED
+          OperandType  CDATA #REQUIRED
+          Inverse      %Boolean;
+          Name         CDATA #IMPLIED
+          BeanClass    CDATA #REQUIRED>
+
+
+
+<!ELEMENT ViewAttribute (Properties?, Data?, DesignTime?) >
+<!ATTLIST ViewAttribute
+          Name              CDATA #REQUIRED
+          AliasName         CDATA #IMPLIED
+          EntityAttrName    CDATA #IMPLIED
+          EntityUsage       CDATA #IMPLIED
+          Expression        CDATA #IMPLIED
+          Type              CDATA #IMPLIED
+          ColumnType        CDATA #IMPLIED
+          ElemType          CDATA #IMPLIED
+          SQLType           CDATA #IMPLIED
+          Domain            CDATA #IMPLIED
+          IsUpdateable      %UpdateableFlag;
+          IsSelected        %Boolean2;
+          IsQueriable       %Boolean2;
+          IsVisible         %Boolean2;
+          IsPersistent      %Boolean2;
+          IsUnique          %Boolean;
+          IsNotNull         %Boolean;
+          PrecisionRule     %Boolean;
+          AttrLoad          %AttrLoadEnum;
+          DiscrColumn       %Boolean;
+          Passivate         %Boolean;
+          Scale             CDATA "-127"
+          Precision         CDATA "0"
+          DefaultValue      CDATA #IMPLIED>
+
+
+<!ELEMENT Attribute (Properties?, Data?, (DesignTime         |
+                                RangeValidationBean   |
+                                ValidationBean        |
+                                MethodValidationBean  |
+                                CompareValidationBean |
+                                ListValidationBean)*)>
+<!ATTLIST Attribute
+          Name              CDATA #REQUIRED
+          Type              CDATA #REQUIRED
+          ElemType          CDATA #IMPLIED
+          Domain            CDATA #IMPLIED
+          IsUpdateable      %UpdateableFlag;
+          IsSessionScope    %Boolean;
+          IsSelected        %Boolean2;
+          IsQueriable       %Boolean2;
+          IsVisible         %Boolean2;
+          IsPersistent      %Boolean2;
+          IsUnique          %Boolean;
+          IsNotNull         %Boolean;
+          AttrLoad          %AttrLoadEnum;
+          ColumnName        CDATA #REQUIRED
+          ColumnType        CDATA #REQUIRED
+          SQLType           CDATA #IMPLIED
+          TableName         CDATA #IMPLIED
+          PrimaryKey        %Boolean;
+          DiscrColumn       %Boolean;
+          OIDAttrNames      CDATA #IMPLIED
+          ChangeIndicator   %Boolean;
+          RetrievedOnUpdate %Boolean;
+          RetrievedOnInsert %Boolean;
+          HistoryColumn     %HistoryKind;
+          Scale             CDATA "-127"
+          Precision         CDATA "0"
+          PrecisionRule     %Boolean2;
+          Expression        CDATA #IMPLIED
+          DefaultValue      CDATA #IMPLIED>
+
+<!ELEMENT Variable (Properties?, Data?, (DesignTime         |
+                                RangeValidationBean   |
+                                ValidationBean        |
+                                MethodValidationBean  |
+                                CompareValidationBean |
+                                AttrArray             |
+                                ListValidationBean)*)>
+<!ATTLIST Variable
+          Name              CDATA #REQUIRED
+          Type              CDATA #REQUIRED
+          Kind              CDATA #IMPLIED
+          IsUpdateable      %UpdateableFlag;
+          IsNotNull         %Boolean;
+          Scale             CDATA "-127"
+          Precision         CDATA "0"
+          PrecisionRule     %Boolean2;
+          DefaultValue      CDATA #IMPLIED>
+
+<!ELEMENT Key (DesignTime | AttrArray)*>
+<!ATTLIST Key Name CDATA #REQUIRED>
+
+<!ELEMENT SubscribeEvent (AttrArray*)>
+<!ATTLIST SubscribeEvent
+          StringItem CDATA #REQUIRED
+          ItemName   CDATA #REQUIRED
+          ScopeValue CDATA #REQUIRED
+          Finder     CDATA #IMPLIED>
+
+<!ELEMENT Publisher (SubscribeEvent+)>
+<!ATTLIST Publisher ItemName CDATA #REQUIRED>
+
+<!ELEMENT PublishEvent (Item*)>
+<!ATTLIST PublishEvent Name CDATA #REQUIRED>
+
+<!ELEMENT ViewLinkAccessor ANY>
+<!ATTLIST ViewLinkAccessor
+          Name              CDATA #IMPLIED
+          Type              CDATA #IMPLIED
+          ViewLinkEnd       CDATA #IMPLIED
+          ViewLinkOtherEnd  CDATA #IMPLIED
+          ViewLink          CDATA #IMPLIED
+          ViewLinkName      CDATA #IMPLIED
+          Reversed          %Boolean;
+          IsUpdateable      %UpdateableFlag;>
+
+<!ELEMENT AccessorAttribute ANY>
+<!ATTLIST AccessorAttribute
+          Name              CDATA #IMPLIED
+          Association       CDATA #IMPLIED
+          Type              CDATA #IMPLIED
+          AssociationEnd    CDATA #IMPLIED
+          AssociationOtherEnd CDATA #IMPLIED
+          IsUpdateable      %UpdateableFlag;>
+
+<!ELEMENT CustomAttribute ANY>
+<!ATTLIST CustomAttribute
+          DefClass          CDATA #REQUIRED
+           Name              CDATA #IMPLIED
+          Association       CDATA #IMPLIED
+          AssociationEnd       CDATA #IMPLIED
+          AssociationOtherEnd       CDATA #IMPLIED
+          Type              CDATA #IMPLIED
+          CmrAccessor    CDATA #IMPLIED
+          IsUpdateable         %Boolean;>
+
+<!ELEMENT AssociationAccessor ANY>
+<!ATTLIST AssociationAccessor
+          Name        CDATA #IMPLIED
+          Association CDATA #IMPLIED>
+
+<!ELEMENT Entity (Properties?, Data?, DesignTime?, PublishEvent*, Publisher*,
+                                          UniquePKValidationBean?,
+                                         (ValidationBean         |
+                                          RangeValidationBean    |
+                                          MethodValidationBean   |
+                                          CompareValidationBean  |
+                                          ListValidationBean     |
+                                          Attribute              |
+                                          AccessorAttribute      |
+                                          CustomAttribute        |
+                                          AssociationAccessor    |
+                                          ViewLinkAccessor       |
+                                          Variable               |
+                                          Publisher       |
+                                          Key)* )>
+<!ATTLIST Entity
+          Name          CDATA #REQUIRED
+          Extends       CDATA #IMPLIED
+          DBObjectType  CDATA #IMPLIED
+          DBObjectName  CDATA #IMPLIED
+          ViewObjectBase CDATA #IMPLIED
+          AliasName     CDATA #IMPLIED
+          BindingStyle  CDATA #IMPLIED
+          BatchThreshold CDATA #IMPLIED
+          IsPersistent  %Boolean2;
+          IsUpdatable   %Boolean2;
+          IsRefPKBased  %Boolean;
+          AssociationAccessorRetained %Boolean;
+          UpdateChangedColumns %Boolean2;
+          RowClass      CDATA #IMPLIED
+          CollClass     CDATA #IMPLIED
+          DefClass      CDATA #IMPLIED
+          MsgBundleClass    CDATA #IMPLIED
+          EJBObjectClassName CDATA #IMPLIED
+          EJBHomeClassName   CDATA #IMPLIED
+          EJBHomeJNDIName    CDATA #IMPLIED
+          UseGlueCode %Boolean2; >
+
+
+<!ELEMENT EntityUsage (DesignTime?, ViewAttribute*)>
+<!ATTLIST EntityUsage
+          Name CDATA #REQUIRED
+          Entity CDATA #REQUIRED
+          SourceUsage CDATA #IMPLIED
+          AssociationEnd CDATA #IMPLIED
+          Association CDATA #IMPLIED
+          ReadOnly  %Boolean;
+          Reference %Boolean;
+          EntireObjectTable %Boolean;
+          >
+
+<!ELEMENT ViewObject ((Properties   |
+                  Attribute         |
+                  ViewAttribute     |
+                  AttrArray         |
+                  DesignTime        |
+                  Publisher         |
+                  ViewLinkAccessor  |
+                  Variable          |
+                  SQLQuery          |
+                  Finder            |
+                  EntityUsage)*,
+                  ComponentInterfaceBase?,
+                  RowInterfaceBase?)>
+<!ATTLIST ViewObject
+          Name               CDATA #REQUIRED
+          queryStatement     CDATA #IMPLIED
+          SelectList      CDATA #IMPLIED
+          FromList        CDATA #IMPLIED
+          Where           CDATA #IMPLIED
+          SelectListFlags CDATA #IMPLIED
+          FromListFlags   CDATA #IMPLIED
+          WhereFlags      CDATA #IMPLIED
+          OrderBy         CDATA #IMPLIED
+          QueryHint       CDATA #IMPLIED
+          BindingStyle       CDATA #IMPLIED
+          CustomQuery     CDATA #REQUIRED
+          MaxRowsPerNode  CDATA #IMPLIED
+          MaxActiveNodes  CDATA #IMPLIED
+          RowClass           CDATA #IMPLIED
+          ComponentClass     CDATA #IMPLIED
+          MsgBundleClass     CDATA #IMPLIED
+          DefClass        CDATA #IMPLIED
+          ComponentInterface CDATA #IMPLIED
+          ClientProxyName    CDATA #IMPLIED
+          ClientRowProxyName CDATA #IMPLIED
+          RowInterface       CDATA #IMPLIED
+          FetchMode       CDATA #IMPLIED
+          FetchSize       CDATA #IMPLIED
+          MaxFetchSize    CDATA #IMPLIED
+          Passivate        %VOPassivationEnum;
+          PageIterMode     %PageIterModeType;
+          ViewLinkAccessorRetained %Boolean;
+          UseGlueCode %Boolean2;
+          Extends         CDATA #IMPLIED
+          IsFinderView  %Boolean;>
+
+
+
+<!ELEMENT ViewUsage (Properties?, Data?, DesignTime?, Remote*)>
+<!ATTLIST ViewUsage
+          Name            CDATA #REQUIRED
+          ViewObjectName  CDATA #REQUIRED
+          ClientProxyName CDATA #IMPLIED>
+
+
+<!ELEMENT ViewLinkUsage (Properties?, Data?, DesignTime?)>
+<!ATTLIST ViewLinkUsage
+          Name           CDATA #REQUIRED
+          ViewLinkObjectName CDATA #REQUIRED
+          SrcViewUsageName CDATA #IMPLIED
+          DstViewUsageName CDATA #IMPLIED
+          Reversed          %Boolean;>
+
+<!ELEMENT AppModuleUsage (Properties?, Data?, DesignTime?)>
+<!ATTLIST AppModuleUsage
+          Name           CDATA #REQUIRED
+          FullName CDATA #REQUIRED>
+
+
+<!ELEMENT DBConnection (DesignTime?) >
+<!ATTLIST DBConnection
+          Name CDATA #IMPLIED
+          ConnectString CDATA #IMPLIED
+          UserName CDATA #IMPLIED
+          Password CDATA #IMPLIED>
+
+
+<!ELEMENT ViewLinkDefEnd (AttrArray, DesignTime?)>
+<!ATTLIST ViewLinkDefEnd
+          Name CDATA #REQUIRED
+          Owner CDATA #REQUIRED
+          IsNavigable %Boolean;
+          IsUpdateable %UpdateableFlag;
+          Cardinality CDATA #IMPLIED
+          IsPartitionUsingWhereClause %Boolean2;
+          Source %Boolean; >
+
+<!ELEMENT AssociationEnd (AttrArray+, DesignTime?)>
+<!ATTLIST AssociationEnd
+          Name CDATA #REQUIRED
+          Cardinality CDATA #REQUIRED
+          Source %Boolean;
+          ExposedAccessor %Boolean2;
+          HasOwner %Boolean;
+          CascadeDelete %Boolean;
+          CascadeUpdate %Boolean;
+          DeleteContainee %Boolean;
+          LockTopContainer %Boolean2;
+          UpdateHistoryColumn %Boolean;
+          SuppressEvent %Boolean;
+          Owner CDATA #REQUIRED
+          IntersectEntity CDATA #IMPLIED
+          AliasName CDATA #IMPLIED
+          >
+
+
+<!ELEMENT Association ( AssociationEnd | DesignTime | DesignTimeStringArray)*>
+<!ATTLIST Association
+          Name      CDATA #REQUIRED
+          Where     CDATA #IMPLIED
+          Extends   CDATA #IMPLIED>
+
+<!ELEMENT AppModule (Properties?, Data?, (DesignTime | AppModuleUsage | ViewUsage | ComponentUsage | ViewLinkUsage | Variable | Remote)*, ComponentInterfaceBase? )>
+<!ATTLIST AppModule Name      CDATA #REQUIRED
+          ComponentClass      CDATA #IMPLIED
+          DefClass            CDATA #IMPLIED
+          Extends             CDATA #IMPLIED
+          ComponentInterface  CDATA #IMPLIED
+          ClientProxyName     CDATA #IMPLIED
+          ClearCacheOnCommit  %Boolean;
+          ClearCacheOnRollback %Boolean2;
+          RequeryOnCommit     %Boolean;
+          LoadComponentsLazily CDATA #IMPLIED>
+
+<!ELEMENT Remote (DesignTime?)>
+<!ATTLIST Remote Name      CDATA #REQUIRED
+          ServerClassName     CDATA #IMPLIED
+          ClientProxyName     CDATA #IMPLIED
+          ClientRowProxyName  CDATA #IMPLIED>
+
+<!ELEMENT ViewLink (ViewLinkDefEnd | DesignTime)*>
+<!ATTLIST ViewLink Name              CDATA #REQUIRED
+                   EntityAssociation CDATA #IMPLIED
+                   EntityAssociationReversed %Boolean;
+                   Where             CDATA #IMPLIED
+                   WhereFlags        CDATA #IMPLIED
+                   Extends           CDATA #IMPLIED>
+
+
+<!ELEMENT Containee (DesignTime?)>
+<!ATTLIST Containee
+          Name CDATA #REQUIRED
+          FullName CDATA #REQUIRED
+          ObjectType  CDATA #REQUIRED>
+
+<!ELEMENT JboObject (Properties?, Data?, DesignTime?)>
+<!ATTLIST JboObject Name CDATA #REQUIRED>
+
+<!ELEMENT Domain (Properties?, Data?, DesignTime?, (Attribute | ValidationBean)*)>
+<!ATTLIST Domain
+          Name          CDATA #REQUIRED>
+
+<!ELEMENT JboPackage (Properties?, Data?, (DesignTime | Entity | ViewObject | DBConnection | Association | JboObject | ViewUsage | ViewLink | Domain | AppModule | ComponentObject | Containee | AttrArray)*)>
+<!ATTLIST JboPackage
+          Name             CDATA #REQUIRED
+          PackageName      CDATA #IMPLIED
+          SeparateXMLFiles %Boolean;>
+
+<!ELEMENT JboProject (Properties?, Data?, (DesignTime | Containee | Substitutes | RegisteredRule)*)>
+<!ATTLIST JboProject
+          Name             CDATA #REQUIRED
+          PackageName      CDATA #IMPLIED
+          HasJava          %Boolean2;
+          LazyLoad         %Boolean2;
+          JUIProject       %Boolean;
+          CliApplication   CDATA #IMPLIED
+          ClientType       CDATA #IMPLIED
+          SeparateXMLFiles %Boolean;>
+
+<!ELEMENT ComponentObject (Properties?, Data?, RESERVED) >
+<!ATTLIST ComponentObject
+          Name   CDATA #REQUIRED
+          ComponentClass  CDATA #IMPLIED
+          NewAttribute1 CDATA #REQUIRED
+          NewAttribute2 CDATA #REQUIRED>
+
+<!ELEMENT ComponentUsage (Properties?, Data?, DesignTime?, Remote*)>
+<!ATTLIST ComponentUsage
+          Name            CDATA #REQUIRED
+          ComponentObjectName  CDATA #REQUIRED
+          ClientProxyName CDATA #IMPLIED
+          ServerClassName CDATA #IMPLIED>
+
+<!ELEMENT RESERVED EMPTY >
+<!ATTLIST RESERVED
+          Attrib1  CDATA #REQUIRED
+          Attrib2  CDATA #REQUIRED>
+
+<!ELEMENT Finder EMPTY>
+<!ATTLIST Finder
+          Name            CDATA #REQUIRED
+          ViewObject      CDATA #REQUIRED>
+
